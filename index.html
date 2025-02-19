@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Case Vacanze - Roma</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lato';
             margin: 0;
             padding: 0;
             background-color: #fff;
@@ -59,9 +60,9 @@
         nav ul li a {
             color: #dbd3c6;
             text-decoration: none;
-            font-weight: bold;
             cursor: pointer;
         }
+
         section {
             padding: 100px 40px 40px;
             text-align: center;
@@ -73,11 +74,12 @@
             margin: 20px auto;
         }
         .description {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
             font-size: 16px;
-            color: #555;
+            color: #2c2c2c;
         }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -93,6 +95,29 @@
             cursor: pointer;
             text-align: center;
         }
+        .service-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 10%;
+            text-align: left;
+        }
+        .service-section img {
+            width: 40%;
+            border-radius: 10px;
+        }
+        .service-text {
+            width: 50%;
+            padding: 20px;
+        }
+        .download-btn {
+            background: #000;
+            color: #dbd3c6;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
     </style>
 
 
@@ -106,6 +131,7 @@
             <div class="divider"></div>
             <nav>
                 <ul>
+                    <li><a href="#gestione">ROMA</a></li>
                     <li><a href="#gestione">Gestione</a></li>
                     <li><a href="#prezzi">Prezzi</a></li>
                     <li><a href="#analytics">Analytics</a></li>
@@ -118,7 +144,7 @@
     <section id="gestione">
         <h2>I Nostri Servizi</h2>
         <div class="divider-thin"></div>
-        <p class="description">Siamo un’agenzia che si occupa di gestire case vacanze con gioia e amore per la città e l’accoglienza da più di 12 anni e non ci stanchiamo mai. Puntiamo all’eccellenza e alla soddisfazione dei nostri proprietari che affidano a noi la casa. La trattiamo come se fosse nostra.</p>
+        <p class="description">Siamo un’agenzia che si occupa di gestire case vacanze con gioia, amore per la città di Roma ed accoglienza da più di 12 anni. e non ci stanchiamo mai! Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei proprietari che affidano a noi la casa. La trattiamo con cura, come se fosse nostra.</p>
         <div class="services-grid">
             <div class="service-box" onclick="location.href='#gestione'">Gestione</div>
             <div class="service-box" onclick="location.href='#affitti'">Affitti</div>
