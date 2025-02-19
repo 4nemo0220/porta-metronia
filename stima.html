@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stima la tua casa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="stima_model.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <img src="logo.png" alt="Logo" class="logo">
+                Porta Metronia Case Vacanze
+            </div>
+            <div class="divider"></div>
+            <nav>
+                <ul>
+                    <li><a href="gestione.html">ROMA</a></li>
+                    <li><a href="gestione.html">Gestione</a></li>
+                    <li><a href="prezzi.html">Prezzi</a></li>
+                    <li><a href="analytics.html">Analytics</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="stima.html" class="cta-button">Stima la tua casa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <h2>Stima la tua casa</h2>
+        <div class="divider-thin"></div>
+        <ol>
+            <li>Trova la formula di affitto più adatta a te</li>
+            <li>Valuta le tue esigenze</li>
+            <li>Assembla il tuo pacchetto di servizi</li>
+            <li>Inizia ad affittare e guadagnare</li>
+        </ol>
+        <form>
+            <label for="zona">Zona:</label>
+            <input type="text" id="zona" name="zona" required>
+            <label for="metri-quadri">Metri quadri:</label>
+            <input type="number" id="metri-quadri" name="metri-quadri" required>
+            <button type="submit">Calcola</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>

@@ -6,136 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Case Vacanze - Roma</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Lato';
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #000;
-        }
-        header {
-            background-color: #000;
-            color: #dbd3c6;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            width: 90%;
-            margin: auto;
-        }
-        .logo {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .brand {
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .divider {
-            height: 30px;
-            width: 1px;
-            background-color: #dbd3c6;
-            margin: 0 15px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #dbd3c6;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        section {
-            padding: 100px 40px 40px;
-            text-align: center;
-        }
-        .divider-thin {
-            width: 50px;
-            height: 2px;
-            background-color: #dbd3c6;
-            margin: 20px auto;
-        }
-        .description {
-            max-width: 800px;
-            margin: auto;
-            font-size: 16px;
-            color: #2c2c2c;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-            gap: 20px;
-            padding: 20px;
-            /*max-width: 400px;*/
-        }
-        .service-box {
-            background: #dbd3c6;
-            color: #000;
-            padding: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            text-align: center;
-        }
-        .service-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /*padding: 80px 10%;*/
-            text-align: left;
-        }
-        .service-section img {
-            width: 40%;
-            border-radius: 10px;
-        }
-        .service-text {
-            width: 50%;
-            padding: 20px;
-        }
-        .download-btn {
-            background: #000;
-            color: #dbd3c6;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-    </style>
-
-
+</head>
 <body>
     <header>
         <div class="container">
             <div class="brand">
-                <img src="logo.png" alt="Logo" class="logo">
+                <img src="logo.png" alt="Logo" class="logo" href="index.html">
                 Porta Metronia Case Vacanze
             </div>
             <div class="divider"></div>
+            <a href="index.html">ROMA</a>
             <nav>
                 <ul>
-                    <li><a href="#gestione">ROMA</a></li>
-                    <li><a href="#gestione">Gestione</a></li>
-                    <li><a href="#prezzi">Prezzi</a></li>
-                    <li><a href="#analytics">Analytics</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="index.html">Gestione</a></li>
+                    <li><a href="prezzi.html">Prezzi</a></li>
+                    <li><a href="analytics.html">AI & Analytics</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                    <li><a href="stima.html" class="cta-button">Stima la tua casa</a></li>
                 </ul>
             </nav>
         </div>
@@ -144,17 +31,22 @@
     <section id="gestione">
         <h2>I Nostri Servizi</h2>
         <div class="divider-thin"></div>
-        <p class="description">Siamo un’agenzia che si occupa di gestire case vacanze con gioia, amore per la città di Roma ed accoglienza da più di 12 anni. e non ci stanchiamo mai! Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei proprietari che affidano a noi la casa. La trattiamo con cura, come se fosse nostra.</p>
+        <p class="description">
+            🏛 "Roma, la tua casa lontano da casa"
+            💛 "Accogliamo con il cuore, gestiamo con passione"
+            🏡 "Ospitalità autentica, esperienze indimenticabili"
+            🔑 "La tua casa vacanze, curata come fosse nostra"
+            Siamo un’agenzia che si occupa di gestire case vacanze con gioia, amore per la città di Roma ed accoglienza da più di 12 anni. e non ci stanchiamo mai! Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei proprietari che affidano a noi la casa. La trattiamo con cura, come se fosse nostra.</p>
         <div class="services-grid">
             <div class="service-box" onclick="location.href='#gestione'">Gestione</div>
             <div class="service-box" onclick="location.href='#affitti'">Affitti</div>
             <div class="service-box" onclick="location.href='#cohosting'">Co-hosting</div>
-            <div class="service-box" onclick="location.href='#analytics'">Analytics</div>
+            <div class="service-box" onclick="location.href='#analytics'">AI & Analytics</div>
         </div>
     </section>
 
     <section id="gestione" class="service-section">
-        <img src="gestione.png" alt="Gestione Casa Vacanze">
+        <img src="images/gestione.png" alt="Gestione Casa Vacanze">
         <div class="service-text">
             <h2>Gestione Case Vacanze</h2>
             <p>Gestiamo la tua casa vacanze in modo professionale e ottimizzato per massimizzare i guadagni.</p>
@@ -163,7 +55,7 @@
     </section>
 
     <section id="affitti" class="service-section">
-        <img src="affitti.png" alt="Affitti Brevi">
+        <img src="images/affitti.png" alt="Affitti Brevi">
         <div class="service-text">
             <h2>Affitti Brevi</h2>
             <p>Ottimizziamo il tuo immobile per affitti brevi su Airbnb e altre piattaforme.</p>
@@ -172,7 +64,7 @@
     </section>
 
     <section id="cohosting" class="service-section">
-        <img src="cohosting.png" alt="Co-Hosting">
+        <img src="images/cohosting.png" alt="Co-Hosting">
         <div class="service-text">
             <h2>Co-Hosting</h2>
             <p>Offriamo supporto per check-in, pulizie e gestione degli ospiti.</p>
@@ -181,7 +73,7 @@
     </section>
 
     <section id="analytics" class="service-section">
-        <img src="analytics.png" alt="Analytics e Consulenza">
+        <img src="images/analytics.png" alt="Analytics e Consulenza">
         <div class="service-text">
             <h2>Analytics & Consulenza</h2>
             <p>Utilizziamo dati avanzati per ottimizzare le tue prenotazioni e migliorare i tuoi annunci.</p>
@@ -196,7 +88,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Gestione Case Vacanze Roma. Tutti i diritti riservati.</p>
+        <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>

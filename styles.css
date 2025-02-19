@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+header {
+    background-color: #000;
+    color: #dbd3c6;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.divider {
+    height: 30px;
+    width: 1px;
+    background-color: #dbd3c6;
+    margin: 0 15px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin-left: 50px; /* Add padding to separate logo and menu */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #dbd3c6;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CTA Button Menù */
+.cta-button {
+    background-color: #ff5a5f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e04e50;
+}
+
+/* Sections */
+section {
+    padding: 100px 40px 40px;
+    text-align: center;
+}
+
+.divider-thin {
+    width: 50px;
+    height: 2px;
+    background-color: #dbd3c6;
+    margin: 20px auto;
+}
+
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+    color: #2c2c2c;
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.service-box {
+    background: #dbd3c6;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0; /* Sharp edges */
+    transition: background-color 0.3s ease;
+}
+
+.service-box:hover {
+    background-color: #000;
+    color: #dbd3c6;
+}
+
+/* Service Sections */
+.service-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.service-section img {
+    width: 30%; /* Smaller images */
+    border-radius: 10px;
+}
+
+.service-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.download-btn {
+    background: #000;
+    color: #dbd3c6;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #dbd3c6;
+    text-align: center;
+    padding: 20px;
+}
