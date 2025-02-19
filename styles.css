@@ -20,11 +20,23 @@ header {
     z-index: 1000;
 }
 
-.container {
+.home {
     display: flex;
     align-items: center;
     width: 90%;
     margin: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+}
+
+.servizi {
+    align-items: center;
+    padding-top: 50px;
 }
 
 .logo {
@@ -37,6 +49,27 @@ header {
     align-items: center;
     font-weight: bold;
     font-size: 18px;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the default text color */
+    cursor: pointer; /* Keep the pointer cursor to indicate clickability */
+}
+.roma-text {
+    font-weight: normal;
+    font-size: 18px;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep the default text color */
+    cursor: pointer; /* Keep the pointer cursor to indicate clickability */
+}
+
+.brand:hover,
+.roma-text:hover {
+    text-decoration: none; /* Prevent underline on hover */
+    color: inherit; /* Ensure no color change on hover */
+}
+
+.brand:visited,
+.roma-text:visited {
+    color: inherit; /* Prevent purple color after clicking */
 }
 
 .divider {
@@ -87,14 +120,19 @@ section {
 }
 
 .divider-thin {
-    width: 50px;
-    height: 2px;
+    width: 80px;
+    height: 1px;
     background-color: #dbd3c6;
     margin: 20px auto;
 }
 
+.space{
+    height: 30px;
+}
+
+
 .description {
-    max-width: 800px;
+    max-width: 600px;
     margin: auto;
     font-size: 16px;
     color: #2c2c2c;
@@ -112,10 +150,11 @@ section {
     background: #dbd3c6;
     color: #000;
     padding: 10px 20px;
+    width: 150px;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    border-radius: 0; /* Sharp edges */
+    border-radius: 5px; /* Sharp edges */
     transition: background-color 0.3s ease;
 }
 
@@ -158,3 +197,23 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+#BackToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #BackToTopBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }

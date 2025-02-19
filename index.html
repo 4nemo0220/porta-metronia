@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Case Vacanze - Roma</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
-        <div class="container">
+        <!-- HOME button -->
+        <div class="home">
             <a href="index.html" class="brand">
                 <img src="logo.png" alt="Logo" class="logo">
-                <a class="brand">Porta Metronia Case Vacanze</a>
-                <div class="divider"></div>
-                <a class="brand">ROMA</a>
+                <span>Porta Metronia Case Vacanze</span>
             </a>
+            <div class="divider"></div>
+            <span class="roma-text">ROMA</span>
+        </div>
+        <!-- MENU -->
+        <div class="menu">
             <nav>
                 <ul>
                     <li><a href="index.html">Gestione</a></li>
@@ -28,20 +34,25 @@
         </div>
     </header>
 
-    <section id="gestione">
-        <h2>I Nostri Servizi</h2>
-        <div class="divider-thin"></div>
-        <p class="description">
-            🏛 "Roma, la tua casa lontano da casa"
-            💛 "Accogliamo con il cuore, gestiamo con passione"
-            🏡 "Ospitalità autentica, esperienze indimenticabili"
-            🔑 "La tua casa vacanze, curata come fosse nostra"
-            Siamo un’agenzia che si occupa di gestire case vacanze con gioia, amore per la città di Roma ed accoglienza da più di 12 anni. e non ci stanchiamo mai! Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei proprietari che affidano a noi la casa. La trattiamo con cura, come se fosse nostra.</p>
-        <div class="services-grid">
-            <div class="service-box" onclick="location.href='#gestione'">Gestione</div>
-            <div class="service-box" onclick="location.href='#affitti'">Affitti</div>
-            <div class="service-box" onclick="location.href='#cohosting'">Co-hosting</div>
-            <div class="service-box" onclick="location.href='#analytics'">AI & Analytics</div>
+    <!-- HOME PAGE -->
+    <section>
+        <!-- SERVIZI -->
+        <div class="servizi"></div>
+            <h2>I Nostri Servizi</h2>
+            <div class="divider-thin"></div>
+            <p class="description">
+                Gestiamo case vacanze con gioia ed amore per la città di Roma da più di 15 anni<br>
+                Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei nostri proprietari<br><br>
+                🏛 Roma, la tua casa lontano da casa<br>
+                💛 Accogliamo con il cuore, gestiamo con passione<br>
+                🏡 Ospitalità autentica, esperienze indimenticabili<br>
+                🔑 La tua casa vacanze, curata come fosse nostra</p>
+            <div class="space"></div>
+            <div class="services-grid">
+                <div class="service-box" onclick="location.href='#gestione'">Casa Vacanze</div>
+                <div class="service-box" onclick="location.href='#affitti'">Affitti Brevi</div>
+                <div class="service-box" onclick="location.href='#cohosting'">Co-hosting</div>
+                <div class="service-box" onclick="location.href='#analytics'">AI & Analytics</div>
         </div>
     </section>
 
@@ -80,12 +91,13 @@
             <button class="download-btn">Scarica la brochure</button>
         </div>
     </section>
-
+    <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">Top</button> 
     <section id="contatti">
         <h2>Contattaci</h2>
         <p>Email: <a href="mailto:info@tuodominio.com">info@portametronia.com</a></p>
         <p>Telefono: +39 333 333 3333</p>
     </section>
+
 
     <footer>
         <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
