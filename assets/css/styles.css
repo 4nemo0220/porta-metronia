@@ -1,4 +1,11 @@
 /* General Styles */
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
