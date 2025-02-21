@@ -3,98 +3,9 @@
 Primary style
 
 -------------------------------- */
-body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #000;
-}
-
-header {
-    background-color: #000;
-    color: #dbd3c6;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.home {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: auto;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    margin: auto;
-}
-
-.servizi {
-    align-items: center;
-    padding-top: 50px;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep the default text color */
-    cursor: pointer; /* Keep the pointer cursor to indicate clickability */
-}
-.roma-text {
-    font-weight: normal;
-    font-size: 18px;
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Keep the default text color */
-    cursor: pointer; /* Keep the pointer cursor to indicate clickability */
-}
-
-.brand:hover,
-.roma-text:hover {
-    text-decoration: none; /* Prevent underline on hover */
-    color: inherit; /* Ensure no color change on hover */
-}
-
-.brand:visited,
-.roma-text:visited {
-    color: inherit; /* Prevent purple color after clicking */
-}
 
 
-nav ul {
-    list-style: none;
-    margin-left: 50px; /* Add padding to separate logo and menu */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #dbd3c6;
-    text-decoration: none;
-    cursor: pointer;
-}
+/* Remove header, .home, .menu, .logo, .brand, .roma-text, nav, and .divider styles as they're in common.css */
 
 .divider {
     height: 30px;
@@ -103,9 +14,9 @@ nav ul li a {
     margin: 0 15px;
 }
 /* Sections */
-.roadmap {
-    padding: 100px 40px 40px;
+.intro {
     text-align: center;
+    padding: 100px 40px 40px;
 }
 
 .divider-thin {
@@ -375,12 +286,12 @@ html * {
   .cd-timeline-content .cd-read-more {
     float: right;
     padding: 0.8em 1em;
-    background: #615d58;
+    background: #ff5a5f;
     color: #ffffff;
     border-radius: 0.25em;
   }
   .no-touch .cd-timeline-content .cd-read-more:hover {
-    background-color: #bac4cb;
+    background-color: #e04e50;
   }
   .cd-timeline-content .cd-date {
     float: left;
@@ -582,13 +493,148 @@ html * {
 
 .custom-bullet li {
     position: relative;
-    padding-left: 20px; /* Space for the custom bullet */
+    /*padding-left: 20px; /* Space for the custom bullet */
 }
 
 .custom-bullet li::before {
-    content: "○"; /* Empty dot */
+    /*content: "○"; /* Empty dot */
     position: absolute;
     left: 0;
     top: 0;
     font-size: 16px; /* Adjust size if needed */
+}
+
+/* Griglia per i pacchetti - Service Grid */
+.service-grid {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;           /* Centra la griglia */
+  border-radius: 5px;          /* Angoli smussati per l'intera griglia */
+  border-collapse: collapse;   /* Unisce i bordi */
+}
+
+.service-grid th,
+.service-grid td {
+  border: 1px solid #dbd3c6;   /* Linee sottili, colore chiaro */
+  padding: 0px;
+  text-align: center;
+}
+
+.service-grid th {
+  background-color: #f9f6f2;   /* Colore di sfondo leggero per l'intestazione */
+  font-weight: bold;
+}
+
+.service-grid td {
+  background-color: #fff;
+}
+
+/* Imposta la larghezza del primo campo per accomodare il testo lungo */
+.service-grid th:first-child,
+.service-grid td:first-child {
+  width: 40%;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Le altre colonne si adattano in modo uguale */
+.service-grid th:not(:first-child),
+.service-grid td:not(:first-child) {
+  width: 12%;
+  height: 20px;               /* Cella quasi quadrata per le spunte */
+  vertical-align: middle;
+  line-height: 40px;          /* Centra verticalmente il contenuto */
+}
+
+
+
+
+
+
+
+
+/* Sezione Packages Container */
+.packages-container {
+  text-align: center;
+  padding: 60px 0px 0px;
+  background-color: #f9f6f2; /* Colore della palette */
+}
+
+.packages-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.packages-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Griglia dei box */
+.packages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Box singolo per ciascun pacchetto */
+.package-box {
+  background-color: #fff;
+  border: 1px solid #dbd3c6;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 250px;       /* Minimum width 250px, si adatta allo spazio disponibile */
+  max-width: 300px;       /* Larghezza massima uguale per ogni box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.package-box:hover {
+  background-color: #f0e9e2; /* Leggero cambio di colore in hover */
+  transform: translateY(-5px);
+}
+
+.package-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.package-box .divider {
+  border: none;
+  height: 1px;
+  background-color: #dbd3c6;
+  margin: 10px 0;
+}
+
+.package-box .description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.package-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.package-box ul li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.package-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #615d58;
 }
