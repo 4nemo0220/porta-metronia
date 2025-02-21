@@ -1,0 +1,161 @@
+.contatti-section{
+    padding-top: 200px;
+}
+
+/* Centra il contenuto della sezione */
+#chi-siamo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Ensure columns are side by side */
+    gap: 20px;
+    max-width: 1200px; /* Set a maximum width to prevent the layout from getting too wide */
+    margin: 0 auto; /* Center the container */
+    margin-top: 150px;
+  }
+  
+  /* Contenitore principale */
+  .chi-siamo-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Immagine */
+  .chi-siamo-photo img {
+    max-width: 80%; /* Imposta la larghezza dell'immagine */
+    border-radius: 8px;
+  }
+  
+  /* Testo */
+  .chi-siamo-text {
+    text-align: left;
+    max-width: 50%; /* Limita la larghezza del testo */
+  }
+
+  .section-divider{
+    width: 300px;
+    color: #f7eedf;
+}
+
+
+/* STILIZZAZIONE SEZIONE STATISTICHE */
+#statistiche {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .stats-box {
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    background-color: #f9f6f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .stats-box h3 {
+    font-size: 36px;
+    margin: 0;
+    color: #000;
+  }
+  
+  .stats-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+
+/* STILIZZAZIONE PRINCIPI E MISSIONE */
+.principi-section {
+    padding: 40px 20px; /* Adjust padding for better alignment */
+  }
+  
+  .principi-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; /* Ensure columns are side by side */
+    gap: 20px;
+    max-width: 1200px; /* Set a maximum width to prevent the layout from getting too wide */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .principi-left {
+    flex: 1; /* Allow the left column to take available space */
+    text-align: left;
+  }
+  
+  .principi-left h2, .principi-left p {
+    margin-bottom: 20px;
+  }
+  
+  .packages-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .package-box {
+    background-color: #f9f6f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .package-box h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #000;
+  }
+  
+  .package-box .divider {
+    margin: 1px 0;
+    border: 1px solid #dbd3c6;
+    width: 100%;
+  }
+  
+  .package-box p.description {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .box-divider {
+    width: 100%;
+    color: #dbd3c6;
+  }
+  
+  .principi-right {
+    flex: 1; /* Allow the right column to take available space */
+    border-radius: 8px;
+    height: auto; /* Ensure the height is auto to adjust based on content */
+  }
+  
+  .principi-right blockquote {
+    padding-top: 45%;
+    font-size: 16px;
+    font-style: italic;
+    color: #1b1b1b;
+  }
+  
+  
+  .section-divider {
+    width: 50%;
+    color: #dbd3c6;
+    margin-top: 40px;
+  }
+  
+  
+  .divider {
+    height: 30px;
+    width: 1px;
+    background-color: #dbd3c6;
+    margin: 0 15px;
+}
