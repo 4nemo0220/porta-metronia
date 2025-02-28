@@ -88,6 +88,12 @@ st.sidebar.divider()
 if st.sidebar.button("Torna al sito"):
     open_new_tab("https://4nemo0220.github.io/porta-metronia/servizi.html")
 
+link = "https://4nemo0220.github.io/porta-metronia/servizi.html"
+st.markdown(
+    f'<a href="{link}" target="_blank"><button style="background-color: #4CAF50; color: white; padding: 10px 24px; border: none; cursor: pointer;">Apri Link</button></a>',
+    unsafe_allow_html=True
+)
+
 
 # *PAGE
 st.title("Stima dei Ricavi per Casa Vacanze a Roma")
