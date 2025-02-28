@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import folium
-from streamlit_folium import folium_static
+#import folium
+#from streamlit_folium import folium_static
 import requests
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
-from geopy.geocoders import Nominatim
-import matplotlib.pyplot as plt
+#from bs4 import BeautifulSoup
+#from playwright.sync_api import sync_playwright
+#from geopy.geocoders import Nominatim
+#import matplotlib.pyplot as plt
 import webbrowser
 import io
 
