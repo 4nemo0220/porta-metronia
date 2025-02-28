@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import folium
-from streamlit_folium import folium_static
+#import folium
+#from streamlit_folium import folium_static
 import requests
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
-from geopy.geocoders import Nominatim
-import matplotlib.pyplot as plt
+#from bs4 import BeautifulSoup
+#from playwright.sync_api import sync_playwright
+#from geopy.geocoders import Nominatim
+#import matplotlib.pyplot as plt
 import webbrowser
 import io
 
@@ -85,8 +85,15 @@ st.sidebar.markdown('''
 3. 🌙 **Compara le metriche** per il numero di notti affittate al mese
 ''')
 st.sidebar.divider()
-if st.sidebar.button("Torna al sito"):
-    open_new_tab("https://4nemo0220.github.io/porta-metronia/servizi.html")
+# if st.sidebar.button("Torna al sito"):
+#     open_new_tab("https://4nemo0220.github.io/porta-metronia/servizi.html")
+
+link = "https://4nemo0220.github.io/porta-metronia/servizi.html"
+st.sidebar.markdown(
+    f'<a href="{link}" target="_blank"><button style="background-color: #ff4b4b; font-weight:strong; color: white; padding: 10px 24px; border-radius: 8px; cursor: pointer;">Torna al Sito</button></a>',
+    unsafe_allow_html=True
+)
+
 
 
 # *PAGE
@@ -110,9 +117,16 @@ Su **Airbnb**:
 4. Seleziona **30 notti** sul cursore
 5. **Torna su questa pagina per stimare il netto con noi**
 ''')
-airbnb_button = st.button("Apri Airbnb", type="primary")
-if airbnb_button:
-    open_new_tab("https://www.airbnb.it/host/homes")
+# airbnb_button = st.button("Apri Airbnb", type="primary")
+# if airbnb_button:
+#     open_new_tab("https://www.airbnb.it/host/homes")
+
+link_airbnb = "https://www.airbnb.it/host/homes"
+st.markdown(
+    f'<a href="{link_airbnb}" target="_blank"><button style="background-color: #ff4b4b; font-weight:strong; color: white; padding: 10px 24px; border-radius: 8px; cursor: pointer;">Apri Airbnb</button></a>',
+    unsafe_allow_html=True
+)
+
 st.markdown('''\n*:red[Utilizziamo il calcolatore di Airbnb poiché poggia su dati di mercato **realistici** e **sempre aggiornati** e su **modelli predittivi** di **Intelligenza Artificiale** che permettono una stima sempre accurata]*''')
 st.divider()
 
