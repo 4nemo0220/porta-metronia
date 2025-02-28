@@ -90,7 +90,7 @@ st.sidebar.divider()
 
 link = "https://4nemo0220.github.io/porta-metronia/servizi.html"
 st.sidebar.markdown(
-    f'<a href="{link}" target="_blank"><button style="background-color: #ff4b4b; font-weight:strong; color: white; padding: 10px 24px; border-radius: 8px; cursor: pointer;">Torna al Sito</button></a>',
+    f'<a href="{link}" target="_blank"><button style="background-color: #ff4b4b;  border: 0px; font-weight:strong; color: white; padding: 10px 24px; border-radius: 8px; cursor: pointer;">Torna al Sito</button></a>',
     unsafe_allow_html=True
 )
 
@@ -121,7 +121,7 @@ Su **Airbnb**:
 
 link_airbnb = "https://www.airbnb.it/host/homes"
 st.markdown(
-    f'<a href="{link_airbnb}" target="_blank"><button style="background-color: #ff4b4b; font-weight:strong; color: white; padding: 10px 24px; border-radius: 8px; cursor: pointer;">Apri Airbnb</button></a>',
+    f'<a href="{link_airbnb}" target="_blank"><button style="background-color: #ff4b4b; border: 0px; font-weight:strong; color: white; padding: 5px 15px; border-radius: 8px; cursor: pointer;">Apri Airbnb</button></a>',
     unsafe_allow_html=True
 )
 
