@@ -160,7 +160,25 @@ if calcola_netto_btn:
     ricavo_20, netto_20 = simulate_occupazione(df_netto, 20)
     ricavo_25, netto_25 = simulate_occupazione(df_netto, 25)
     ricavo_30, netto_30 = simulate_occupazione(df_netto, 30)
-    
+
+    # *SINGLE NETTO FIGURE
+    #st.markdown("**Netto Mensile**")
+    #st.metric("Netto Medio Mese", round(df_netto["Ricavi Netti"].mean()))
+    #col12, col13 = st.columns(2, gap="medium")
+    #col12.metric("Max", round(df_netto["Ricavi Netti"].max()))
+    #col13.metric("Min", round(df_netto["Ricavi Netti"].min()))
+    st.markdown(
+        f"""
+        <div style="background-color:#4CAF50;padding:20px;border-radius:10px;text-align:center">
+            <h2 style="color:white;">💰 Ricavo Netto Mensile</h2>
+            <h1 style="color:white;">{round(df_netto["Ricavi Netti"].mean())}€</h1>
+            <p style="color:white;">📈 Con un massimo di {round(df_netto["Ricavi Netti"].max())}€ mensili ed un minimo di {round(df_netto["Ricavi Netti"].min())}€</p>
+        </div>
+        """,
+        unsafe_allow_html=True)
+    st.write("")
+    st.write("")
+
     # *STATISTICHE MESE
     st.markdown("**📆 Statistiche :orange-background[Mensili]**")
     col1, col2, col3, col4 = st.columns(4, gap="medium")
@@ -168,6 +186,7 @@ if calcola_netto_btn:
     col2.metric("Netto Medio Mese", round(df_netto["Ricavi Netti"].mean()))
     col3.metric("Tasse Medie Mese", round(df_netto["Tasse (€)"].mean()))
     col4.metric("Costi Medi Mese", round(df_netto["Costi Mensili (€)"].mean()))
+    st.write("")
 
     # *STATISTICHE ANNO
     st.markdown("**📆 Statistiche :red-background[Annuali]**")
@@ -188,7 +207,33 @@ if calcola_netto_btn:
     # Colonna 8: Informazioni sui costi
     col8.metric("Totale Costi (anno)", round(df_netto["Costi Mensili (€)"].sum()))
     col8.metric("% Costi su Lordo", f"{round(perc_costi)}%")
+    st.write("")
 
+
+    # *PLOT
+    # Imposta stile
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    sns.set_style("whitegrid")
+    plt.figure(figsize=(10, 6))
+
+    # Plotta le linee con diversi stili
+    sns.lineplot(x=df_netto["Mese"], y=df_netto["Ricavi Lordi"], linestyle='-', marker='o', markersize=8, label='Ricavi Lordi', color='blue')
+    sns.lineplot(x=df_netto["Mese"], y=df_netto["Ricavi Netti"], linestyle='--', marker='s', markersize=8, label='Ricavi Netti', color='green')
+    #sns.lineplot(x=df_netto["Mese"], y=df_netto["Costi Mensili"], linestyle='-.', marker='^', markersize=8, label='Costi', color='red')
+    #sns.lineplot(x=df_netto["Mese"], y=df_netto["Tasse"], linestyle=':', marker='*', markersize=8, label='Tasse', color='orange')
+
+    # Migliora il layout del grafico
+    plt.title('📊 Trend Finanziario Mensile', fontsize=14, fontweight='bold')
+    plt.xlabel('Mese', fontsize=12)
+    plt.ylabel('€', fontsize=12)
+    plt.xticks(rotation=90)  # Ruota i mesi in verticale
+    plt.legend(loc='upper left')
+    plt.grid(True, linestyle='--', alpha=0.6)
+
+    # Mostra il grafico in Streamlit
+    st.pyplot(plt)
+        # *REPORT
     st.markdown("**📈 Scarica il :blue-background[Report]**")
     st.write(df_netto)
 

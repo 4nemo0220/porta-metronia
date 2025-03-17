@@ -24,6 +24,11 @@
     height: 30px;
 }
 
+
+.intro {
+  width: 50%;  /* Imposta la larghezza del paragrafo al 50% della larghezza del contenitore */
+  margin: 0 auto;  /* Centra il paragrafo orizzontalmente */
+}
 /* CTA Button Menù */
 .cta-button {
     background-color: #ff5a5f;
@@ -615,6 +620,173 @@
 }
 
 .package-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #615d58;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+.accordion-container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #ff5a5f;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #615d58;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #000000;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #615d58;
+  border: 1px solid #615d58;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #ff5a5f;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  margin: 2em 0;
+  text-align: left;
+}
+
+
+/* Contenitore della griglia */
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonne */
+  gap: 20px;  /* Spaziatura tra le card */
+  padding: 0% 20% 0% 20%;
+}
+
+/* Box singolo per ciascun servizio */
+.service-card {
+  background-color: #fff;
+  border: 1px solid #dbd3c6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+  background-color: #f0e9e2; /* Leggero cambio di colore in hover */
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.service-card .divider {
+  border: none;
+  height: 1px;
+  background-color: #dbd3c6;
+  margin: 10px 0;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.service-card ul li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.service-card ul li::before {
   content: "•";
   position: absolute;
   left: 0;

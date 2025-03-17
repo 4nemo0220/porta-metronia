@@ -7,9 +7,7 @@
     <title>Gestione Case Vacanze - Roma</title>
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/servizi.css">
-    <script src="assets/js/servizi.js"></script>
 </head>
-
 <body>
     <!-- HEADER -->
     <header>
@@ -29,24 +27,81 @@
                     <li><a href="servizi.html">Servizi & Prezzi</a></li>
                     <li><a href="analytics.html">AI & Analytics</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="stima.html" class="cta-button">Avvia la tua casa</a></li>
+                    <li><a href="https://stima-casa.streamlit.app/" class="cta-button">Stima i Ricavi</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HOME PAGE -->
-    <section class="intro">
-        <!-- SERVIZI -->
+    <!-- SERVIZI PAGE -->
+    <section id="potenzialita-guadagno" class="intro">
         <div class="space"></div>
-        <h2>ROADMAP</h2>
+        <h2>Potenzialità di Guadagno</h2>
+        <div class="divider-thin"></div>
+        <p>Affittare la tua casa come casa vacanze può garantire una redditività superiore rispetto agli affitti tradizionali. 
+        Con la nostra app ottieni una stima accurata dei tuoi guadagni netti, considerando tasse e costi di gestione.</p>
+        <div class="space"></div>
+        <!-- Bottone per accedere alla stima dei ricavi netti -->
+        <a href="https://stima-casa.streamlit.app/" class="cta-button">Stima i Ricavi</a>
+        
+        <!-- FAQ-like answers -->
+        <div class="accordion-container">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button" aria-expanded="false">
+                        <span class="accordion-title">Quanto posso guadagnare affittando la mia casa come casa vacanze?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>I guadagni dipendono da diversi fattori, tra cui la posizione, la stagionalità e le caratteristiche dell'immobile. Utilizziamo dati reali da Airbnb per offrirti una stima precisa dei tuoi guadagni netti, considerando i costi di gestione e le tasse applicabili. A differenza di Airbnb, la nostra app calcola il netto effettivo che puoi ottenere, fornendoti una previsione ancora più accurata.</p>
+                    </div>
+                </div>
+        
+                <div class="accordion-item">
+                    <button class="accordion-button" aria-expanded="false">
+                        <span class="accordion-title">Qual è la redditività rispetto all'affitto tradizionale?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Le case vacanze possono garantire un rendimento superiore grazie alla flessibilità delle tariffe e alla possibilità di adattare i prezzi in base alla domanda stagionale. Rispetto agli affitti a lungo termine, puoi ottenere una maggiore entrata annuale e una gestione più dinamica del tuo immobile.</p>
+                    </div>
+                </div>
+        
+                <div class="accordion-item">
+                    <button class="accordion-button" aria-expanded="false">
+                        <span class="accordion-title">Ci sono stime basate su dati reali per la mia zona?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Sì! Grazie alla nostra app di stima, puoi scoprire in pochi secondi il potenziale della tua proprietà. Utilizziamo dati aggiornati sul mercato locale per offrirti un'analisi personalizzata e aiutarti a prendere decisioni informate sul tuo investimento.</p>
+                    </div>
+                </div>
+        
+                <div class="accordion-item">
+                    <button class="accordion-button" aria-expanded="false">
+                        <span class="accordion-title">Consulenza per diverse formule di affitto</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Oltre alla gestione delle case vacanze, offriamo servizi di consulenza per aiutarti a scegliere la soluzione di affitto più adatta alle tue esigenze. Ti supportiamo nella valutazione delle opzioni di affitto a breve termine, lungo termine e per studenti, fornendoti tutte le informazioni necessarie per massimizzare il rendimento della tua proprietà.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+    
+
+
+    <!-- ROADMAP TIMELINE -->
+    <section class="intro">
+        <div class="space"></div>
+        <h2>Avvia la tua Casa Vacanze</h2>
         <div class="divider-thin"></div>
         <p>🔑 Scopri come avviare tua casa vacanze in pochi passi<br>
             Massimizziamo il valore del tuo immobile con una gestione completa e su misura          
         </p>
     </section>
 
-    <!-- TIMELINE -->
     <section id="cd-timeline" class="cd-container">
         <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-picture">
@@ -128,8 +183,63 @@
 
     <!-- PERSONALIZZA LA GESTIONE DELLA TUA CASA VACANZE -->
     <section id="packages" class="packages-container">
-        <h2>PERSONALIZZA LA GESTIONE DELLA TUA CASA VACANZE</h2>
-        <p>Scegli solo i servizi di cui hai bisogno e costruisci l’offerta perfetta per te.</p>
+        <h2>Servizi Offerti dall'Agenzia</h2>
+        <div class="divider-thin"></div>
+        <p>L'agenzia offre sia una formula di gestione completa che formule di gestione parziale della casa vacanze, <br>seguendo un approccio modulare che consente ai proprietari di scegliere solo i servizi di cui hanno bisogno, <br>dalla richiesta di permessi al Comune, alla ottimizzazione degli annunci online, alla gestione fisica dei Check-in</p>
+        <section class="services">
+            <div class="service-card">
+                <h3>Gestione pratiche amministrative</h3>
+                <p>Gestione delle pratiche burocratiche per la registrazione e la conformità legale.</p>
+            </div>
+            <div class="service-card">
+                <h3>Shooting fotografico e creazione annunci</h3>
+                <p>Servizio fotografico e creazione di annunci ottimizzati per le piattaforme online.</p>
+            </div>
+            <div class="service-card">
+                <h3>Ottimizzazione SEO e strategia prezzi</h3>
+                <p>Ottimizzazione del sito e strategia di prezzi per migliorare la visibilità e le vendite.</p>
+            </div>
+            <div class="service-card">
+                <h3>Gestione calendario e prenotazioni</h3>
+                <p>Gestione delle prenotazioni e disponibilità online.</p>
+            </div>
+            <div class="service-card">
+                <h3>Check-in e check-out professionale</h3>
+                <p>Assistenza professionale durante il check-in e check-out degli ospiti.</p>
+            </div>
+            <div class="service-card">
+                <h3>Assistenza ospiti 24/7</h3>
+                <p>Supporto continuo per gli ospiti, disponibile 24 ore su 24.</p>
+            </div>
+            <div class="service-card">
+                <h3>Gestione guasti e imprevisti</h3>
+                <p>Gestione rapida di guasti e imprevisti durante il soggiorno.</p>
+            </div>
+            <div class="service-card">
+                <h3>Gestione overbooking</h3>
+                <p>Evita o risolvi situazioni di overbooking per garantire una gestione fluida.</p>
+            </div>
+            <div class="service-card">
+                <h3>Guide digitali personalizzate</h3>
+                <p>Creazione di guide digitali personalizzate per ogni casa vacanze.</p>
+            </div>
+            <div class="service-card">
+                <h3>Creazione Linktree per gli ospiti</h3>
+                <p>Raccogli tutte le informazioni utili in un unico link per gli ospiti.</p>
+            </div>
+            <div class="service-card">
+                <h3>Monitoraggio performance e mercato</h3>
+                <p>Analisi delle performance e delle tendenze di mercato per ottimizzare i guadagni.</p>
+            </div>
+            <div class="service-card">
+                <h3>Reportistica avanzata mensile e annuale</h3>
+                <p>Report dettagliati sulla performance della casa vacanze, mensili e annuali.</p>
+            </div>
+        </section>
+        <div class="space"></div>
+        <h2>Pacchetti di Gestione</h2>
+        <div class="divider-thin"></div>
+        <p>Scegli solo i servizi di cui hai bisogno e costruisci l’offerta perfetta per te!</p>
         <div class="packages-grid">
           <div class="package-box">
             <h3>🏡 Pacchetto Base<br>Avvio Veloce</h3>
@@ -315,5 +425,6 @@
     <footer>
         <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
     </footer>
+    <script src="assets/js/FAQ.js"></script>
 </body>
 </html>
