@@ -27,7 +27,7 @@ def calcola_ricavi(tariffa, occupazione, mesi=12):
 def calcola_netto(prezzo_airbnb, occupazione, costi_mensili, tasse):
     # Basic price per night
     prezzo_notte = prezzo_airbnb / 30
-    stagionalita = {"novembre": 0.75, "dicembre": 1, "gennaio": 0.75, "febbraio": 0.75, "agosto": 0.75}
+    stagionalita = {"novembre": 0.70, "dicembre": 1, "gennaio": 0.80, "febbraio": 0.70, "marzo": 0.90,  "agosto": 0.75, }
     ricavi_mensili = {}
     
     # Compute monthly revenue considering seasonality and occupancy
@@ -75,7 +75,7 @@ def simulate_occupazione(df, occ, tax_rate=10):
 ######################################### APP
 
 # *SIDEBAR
-st.sidebar.image("logo.png", width=100)
+st.sidebar.image("assets/img/logo.png", width=100)
 st.sidebar.header("Porta Metronia Case Vacanze")
 st.sidebar.divider()
 st.sidebar.subheader("Steps:")
