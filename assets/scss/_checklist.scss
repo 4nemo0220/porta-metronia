@@ -1,0 +1,22 @@
+/* Cambia il colore del bordo e dell'ombra delle checkbox non selezionate */
+.form-check-input {
+    border-color: #ff5a5f;
+    background-color: white;
+  }
+  
+  /* Cambia il colore di sfondo e del bordo quando la checkbox è selezionata */
+  .form-check-input:checked {
+    background-color: #ff5a5f;
+    border-color: #ff5a5f;
+  }
+  
+  /* Cambia il colore dell'ombra quando la checkbox viene cliccata */
+  .form-check-input:focus {
+    border-color: #ff5a5f;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+  }
+  
+  .form-control:focus{
+    border-color: #ff5a5f;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+  }

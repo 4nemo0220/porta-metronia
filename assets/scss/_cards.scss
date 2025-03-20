@@ -1,0 +1,179 @@
+/* _cards.scss */
+
+/* Fix per il problema dello scroll */
+section[id] {
+  scroll-margin-top: 80px; /* Modifica il valore in base all'altezza della navbar */
+}
+
+/* Stile migliorato per le card */
+.custom-card {
+  min-height: 320px;
+  background-color: #f8f9fa; /* Grigetto di sfondo */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Icona in alto a destra */
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    color: #333; /* Colore dell'icona (puoi cambiare il colore) */
+    z-index: 1; /* Assicurati che l'icona sia sopra gli altri contenuti */
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .btn-primary {
+    background-color: #ff5a5f; /* Stesso colore del CTA */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: #e04e50;
+    }
+
+    /* Freccia nel bottone */
+    .btn-icon {
+      margin-left: 8px;
+      font-size: 18px;
+    }
+  }
+}
+
+.custom-card-service {
+  min-height: 280px;
+  padding: 3%;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.822);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Icona in alto a destra */
+  .card-icon {
+    width: 64px;
+    height: 64px;
+    color: #333; /* Colore dell'icona (puoi cambiare il colore) */
+    background-color: #ff5a5f;
+    border-radius: 10px;
+    z-index: 1; /* Assicurati che l'icona sia sopra gli altri contenuti */
+    margin-bottom: 5px;
+    padding: 3%;
+  }
+}
+
+
+////
+
+// Stili specifici per il Pacchetto All-Inclusive (card evidenziata)
+.card.border-primary {
+  .card-header {
+    background-color: #ff5a5f !important; // Imposta lo sfondo rosso per il titolo, usando !important per sovrascrivere eventuali classi esistenti (come bg-primary)
+    color: #fff; // Testo bianco per il contrasto
+  }
+}
+
+/* SCSS Custom per la sezione Pacchetti */
+#pacchetti {
+  .card {
+    border-color: #ff5a5f;
+    /*.card-header {
+      background-color: #dbd3c68f !important; // Sfondo rosso per il titolo
+    }
+      */
+    .card-body {
+      padding: 2rem; // Aumenta leggermente il padding rispetto al default
+
+      ul {
+        text-align: left;      // Allinea a sinistra le features
+        padding-left: 1.25rem; // Imposta il padding sinistro per i bullet point
+        font-size: 14px;
+      }
+    }
+
+    .header-icon {
+      position:absolute;
+      left: 20px;         // Posiziona l'icona a sinistra
+      top: 9%;           // Posiziona verticalmente al centro del box
+      transform: translateY(-50%);
+      width: 40px;        // Dimensione come da te indicata
+      height: auto;
+      filter: brightness(0); // Rende l'icona nera (se supportato)
+    }
+    
+  }
+  
+  .cta-button-pacchetti {
+    align-self:last baseline;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;    // Include padding e border nel calcolo della larghezza
+    border: 1.5px solid #ff5a5f;  // Outline rosso
+    color: #ff5a5f;            // Testo rosso
+    background-color: transparent;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #ff5a5f;
+      color: #fff;
+    }
+  }
+  
+  // Stili specifici per il Pacchetto All-Inclusive evidenziato
+  .package-highlight {
+    .card.border-primary{
+      border: 1px solid #ff5a60; // Bordo rosso
+    }
+
+    .card-header {
+      background-color: #ff5a60ab !important; // Sfondo rosso per il titolo
+      color: #fff; // Testo bianco per garantire il contrasto
+    }
+  }
+}
+
+.rounded-box {
+  border-radius: 15px; /* Angoli smussati */
+  background-color: #f8f9fa; /* Sfondo chiaro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Altezza uniforme per tutte le colonne */
+
+}
+
+.custom-img {
+  width: 100%; /* L'immagine occupa tutta la larghezza del box */
+  height: 100%; /* L'immagine occupa tutta l'altezza del box */
+  object-fit: cover; /* Ritaglia l'immagine per coprire l'intero spazio senza deformarsi */
+  border-radius: 15px; /* Se vuoi che anche l'immagine abbia angoli smussati */
+}

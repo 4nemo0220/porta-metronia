@@ -1,0 +1,18 @@
+// _accordion.scss
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 90, 95, 0.1);
+    color: rgb(0, 0, 0);
+    font-weight: 650;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 90, 95, 0.3);
+}
+
+.accordion-button {
+    color: #000000;
+}
+
+.accordion-button:hover {
+    background-color: rgba(255, 90, 95, 0.2);
+}

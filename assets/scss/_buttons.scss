@@ -1,0 +1,29 @@
+/* _buttons.scss */
+/* CTA Button per navbar, card e altri bottoni */
+.cta-button {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+  
+.cta-button:hover {
+  background-color: #e04e50;
+  text-decoration: none;
+  color: white;
+}
+  
+  .cta-button:click {
+    border-color: #ff5a5f;
+    color: #ff5a5f;
+    color: darken($primary-color, 10%);
+    background-color: darken($primary-color, 10%);
+  }
+
+  
+/* Stile per il bottone "Stima i Ricavi" */
+
+

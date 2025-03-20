@@ -1,430 +1,615 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestione Case Vacanze - Roma</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/servizi.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servizi & Prezzi | Porta Metronia Case Vacanze</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom CSS (compilato da SCSS) -->
+   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <!-- HOME button -->
-        <div class="home">
-            <a href="index.html" class="brand">
-                <img src="logo.png" alt="Logo" class="logo">
-                <span>Porta Metronia Case Vacanze</span>
-                <div class="divider"></div>
-                <span class="roma-text">ROMA</span>
-            </a>
-        </div>
-        <!-- MENU -->
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="servizi.html">Servizi & Prezzi</a></li>
-                    <li><a href="analytics.html">AI & Analytics</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="https://stima-casa.streamlit.app/" class="cta-button">Stima i Ricavi</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+    </symbol>
+  </svg>
 
-    <!-- SERVIZI PAGE -->
-    <section id="potenzialita-guadagno" class="intro">
-        <div class="space"></div>
-        <h2>Potenzialità di Guadagno</h2>
-        <div class="divider-thin"></div>
-        <p>Affittare la tua casa come casa vacanze può garantire una redditività superiore rispetto agli affitti tradizionali. 
-        Con la nostra app ottieni una stima accurata dei tuoi guadagni netti, considerando tasse e costi di gestione.</p>
-        <div class="space"></div>
-        <!-- Bottone per accedere alla stima dei ricavi netti -->
-        <a href="https://stima-casa.streamlit.app/" class="cta-button">Stima i Ricavi</a>
-        
-        <!-- FAQ-like answers -->
-        <div class="accordion-container">
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-button" aria-expanded="false">
-                        <span class="accordion-title">Quanto posso guadagnare affittando la mia casa come casa vacanze?</span>
-                        <span class="icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>I guadagni dipendono da diversi fattori, tra cui la posizione, la stagionalità e le caratteristiche dell'immobile. Utilizziamo dati reali da Airbnb per offrirti una stima precisa dei tuoi guadagni netti, considerando i costi di gestione e le tasse applicabili. A differenza di Airbnb, la nostra app calcola il netto effettivo che puoi ottenere, fornendoti una previsione ancora più accurata.</p>
-                    </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" aria-expanded="false">
-                        <span class="accordion-title">Qual è la redditività rispetto all'affitto tradizionale?</span>
-                        <span class="icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Le case vacanze possono garantire un rendimento superiore grazie alla flessibilità delle tariffe e alla possibilità di adattare i prezzi in base alla domanda stagionale. Rispetto agli affitti a lungo termine, puoi ottenere una maggiore entrata annuale e una gestione più dinamica del tuo immobile.</p>
-                    </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" aria-expanded="false">
-                        <span class="accordion-title">Ci sono stime basate su dati reali per la mia zona?</span>
-                        <span class="icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Sì! Grazie alla nostra app di stima, puoi scoprire in pochi secondi il potenziale della tua proprietà. Utilizziamo dati aggiornati sul mercato locale per offrirti un'analisi personalizzata e aiutarti a prendere decisioni informate sul tuo investimento.</p>
-                    </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" aria-expanded="false">
-                        <span class="accordion-title">Consulenza per diverse formule di affitto</span>
-                        <span class="icon" aria-hidden="true"></span>
-                    </button>
-                    <div class="accordion-content">
-                        <p>Oltre alla gestione delle case vacanze, offriamo servizi di consulenza per aiutarti a scegliere la soluzione di affitto più adatta alle tue esigenze. Ti supportiamo nella valutazione delle opzioni di affitto a breve termine, lungo termine e per studenti, fornendoti tutte le informazioni necessarie per massimizzare il rendimento della tua proprietà.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
+
+          <span class="brand-text">Porta Metronia Case Vacanze</span>
+          <div class="brand-divider"></div>
+          <span class="brand-text" style="margin-left: 0px">ROMA</span>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
+            <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
+            <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+            <li class="nav-item">
+              <a class="cta-button nav-link" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
+            </li>
+          </ul>
         </div>
-    </section>  
-    
+      </div>
+    </nav>
+  </header>
 
 
-    <!-- ROADMAP TIMELINE -->
-    <section class="intro">
-        <div class="space"></div>
-        <h2>Avvia la tua Casa Vacanze</h2>
-        <div class="divider-thin"></div>
-        <p>🔑 Scopri come avviare tua casa vacanze in pochi passi<br>
-            Massimizziamo il valore del tuo immobile con una gestione completa e su misura          
+  <section id="servizi" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Colonna Sinistra -->
+      <div class="col-md-6">
+        <h1>Scopri i Servizi di Porta Metronia</h1>
+        <p>
+          L'agenzia offre sia una formula di gestione completa che formule di gestione parziale della casa vacanze,
+          seguendo un approccio modulare che consente ai proprietari di scegliere solo i servizi di cui hanno bisogno,
+          dalla richiesta di permessi al Comune, all'ottimizzazione degli annunci online, alla gestione fisica dei Check-in.
         </p>
-    </section>
 
-    <section id="cd-timeline" class="cd-container">
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" alt="Search">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>TROVIAMO LA FORMULA DI AFFITTO PERFETTA PER TE</h2>
-                <p>Analizziamo la tua casa, la zona e il mercato per consigliarti la soluzione di affitto più redditizia e adatta alle tue esigenze:</p>
-                <ul class="custom-bullet">
-                    <li><strong>✔ Casa vacanze</strong></li>
-                    <li><strong>✔ Affitti transitori</strong></li>
-                    <li><strong>✔ B&B</strong></li>
-                    <li><strong>✔ Affitti a lungo termine</strong></li>
-                </ul>
-                <p>📊 Analisi personalizzata: valutazione della zona, confronto con immobili simili e stima dei ricavi</p>
-                <p>📌 Periodo di prova disponibile</p>
-                <!-- Link aggiornato per scrollare alla sezione dei pacchetti -->
-                <a href="#packages" class="cd-read-more">SCOPRI I SERVIZI</a>
-                <span class="cd-date">Step 1</span>
-            </div>
-        </div>
-        
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie">
-                <img src="https://cdn-icons-png.flaticon.com/512/69/69524.png" alt="house"> 
-            </div>
-            <div class="cd-timeline-content">
-                <h2>PREPARIAMO LA CASA E LA RENDIAMO VISIBILE</h2>
-                <p>Ci occupiamo di tutti gli aspetti burocratici e operativi per lanciare il tuo immobile in pochi giorni:</p>
-                <ul class="custom-bullet">
-                    <li>📝 Gestione amministrativa: permessi e documentazione</li>
-                    <li>📸 Shooting fotografico & annunci online su più portali</li>
-                    <li>📢 Ottimizzazione visibilità: SEO, gestione calendario e prezzi dinamici</li>
-                    <li>🏠 Accoglienza perfetta: preparazione della casa e info essenziali per gli ospiti</li>
-                </ul>
-                <a href="#packages" class="cd-read-more">SCOPRI I SERVIZI</a>
-                <span class="cd-date">Step 2</span>
-            </div>
-        </div>
-        
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-picture">
-                <img src="https://img.icons8.com/?size=100&id=qlm0at2vpVci&format=png&color=FFFFFF" alt="Calendar">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>GESTIAMO LE PRENOTAZIONI E L’OSPITALITÀ</h2>
-                <p>Gestiamo ogni aspetto per garantire ai tuoi ospiti un’esperienza eccellente e senza stress per te:</p>
-                <ul class="custom-bullet">
-                    <li>📅 Gestione calendario e tariffe</li>
-                    <li>💬 Interazione con gli ospiti: risposte rapide e assistenza</li>
-                    <li>🔑 Check-in/check-out professionale</li>
-                    <li>🔧 Gestione guasti e imprevisti</li>
-                    <li>🚀 Overbooking? Lo risolviamo noi</li>
-                    <li>📖 Guide digitali personalizzate sul quartiere e sulla città</li>
-                </ul>
-                <a href="#packages" class="cd-read-more">SCOPRI I SERVIZI</a>
-                <span class="cd-date">Step 3</span>
-            </div>
-        </div>
-        
-        <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-location">
-                <img src="https://img.icons8.com/?size=100&id=21591&format=png&color=FFFFFF" alt="Stats">
-            </div>
-            <div class="cd-timeline-content">
-                <h2>MONITORAGGIO & PERFORMANCE: MASSIMIZZIAMO I TUOI GUADAGNI</h2>
-                <p>Teniamo tutto sotto controllo e ti forniamo dati chiari per ottimizzare i risultati:</p>
-                <ul class="custom-bullet">
-                    <li>📊 Report mensili e annuali con trend di mercato</li>
-                    <li>📈 Analisi della performance dell’immobile</li>
-                    <li>📡 Monitoraggio del mercato per strategie sempre aggiornate</li>
-                    <li>🔍 Accesso alla dashboard 24/7 per controllare tutto in tempo reale</li>
-                </ul>
-                <a href="#packages" class="cd-read-more">SCOPRI I SERVIZI</a>
-                <span class="cd-date">Step 4</span>
-            </div>
-        </div>
-    </section>
+        <ul class="list-unstyled ps-1 text-dark">
+          <li>
+            <a class="icon-link text-dark text-decoration-none" href="#cards-section">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Approccio modulare: scegli solo i servizi di cui hai bisogno
+            </a>
+          </li>
+          <li>
+            <a class="icon-link text-dark text-decoration-none" href="#pacchetti">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Esplora e confronta i pacchetti più scelti
+            </a>
+          </li>
+          <li>
+            <a class="icon-link text-dark text-decoration-none" href="#cards-section">
+              <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
+              Costruisci la tua offerta su misura
+            </a>
+          </li>
+        </ul>
+        <p><br></p>
+        <a href="#cards-section" class="btn cta-button">Scopri i servizi</a>
+      </div>
+      <!-- Colonna Destra -->
+      <div class="col-md-6 text-center">
+        <img src="assets/img/cubes_red.jpg" alt="Servizi offerti" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- PERSONALIZZA LA GESTIONE DELLA TUA CASA VACANZE -->
-    <section id="packages" class="packages-container">
-        <h2>Servizi Offerti dall'Agenzia</h2>
-        <div class="divider-thin"></div>
-        <p>L'agenzia offre sia una formula di gestione completa che formule di gestione parziale della casa vacanze, <br>seguendo un approccio modulare che consente ai proprietari di scegliere solo i servizi di cui hanno bisogno, <br>dalla richiesta di permessi al Comune, alla ottimizzazione degli annunci online, alla gestione fisica dei Check-in</p>
-        <section class="services">
-            <div class="service-card">
-                <h3>Gestione pratiche amministrative</h3>
-                <p>Gestione delle pratiche burocratiche per la registrazione e la conformità legale.</p>
-            </div>
-            <div class="service-card">
-                <h3>Shooting fotografico e creazione annunci</h3>
-                <p>Servizio fotografico e creazione di annunci ottimizzati per le piattaforme online.</p>
-            </div>
-            <div class="service-card">
-                <h3>Ottimizzazione SEO e strategia prezzi</h3>
-                <p>Ottimizzazione del sito e strategia di prezzi per migliorare la visibilità e le vendite.</p>
-            </div>
-            <div class="service-card">
-                <h3>Gestione calendario e prenotazioni</h3>
-                <p>Gestione delle prenotazioni e disponibilità online.</p>
-            </div>
-            <div class="service-card">
-                <h3>Check-in e check-out professionale</h3>
-                <p>Assistenza professionale durante il check-in e check-out degli ospiti.</p>
-            </div>
-            <div class="service-card">
-                <h3>Assistenza ospiti 24/7</h3>
-                <p>Supporto continuo per gli ospiti, disponibile 24 ore su 24.</p>
-            </div>
-            <div class="service-card">
-                <h3>Gestione guasti e imprevisti</h3>
-                <p>Gestione rapida di guasti e imprevisti durante il soggiorno.</p>
-            </div>
-            <div class="service-card">
-                <h3>Gestione overbooking</h3>
-                <p>Evita o risolvi situazioni di overbooking per garantire una gestione fluida.</p>
-            </div>
-            <div class="service-card">
-                <h3>Guide digitali personalizzate</h3>
-                <p>Creazione di guide digitali personalizzate per ogni casa vacanze.</p>
-            </div>
-            <div class="service-card">
-                <h3>Creazione Linktree per gli ospiti</h3>
-                <p>Raccogli tutte le informazioni utili in un unico link per gli ospiti.</p>
-            </div>
-            <div class="service-card">
-                <h3>Monitoraggio performance e mercato</h3>
-                <p>Analisi delle performance e delle tendenze di mercato per ottimizzare i guadagni.</p>
-            </div>
-            <div class="service-card">
-                <h3>Reportistica avanzata mensile e annuale</h3>
-                <p>Report dettagliati sulla performance della casa vacanze, mensili e annuali.</p>
-            </div>
-        </section>
-        <div class="space"></div>
-        <h2>Pacchetti di Gestione</h2>
-        <div class="divider-thin"></div>
-        <p>Scegli solo i servizi di cui hai bisogno e costruisci l’offerta perfetta per te!</p>
-        <div class="packages-grid">
-          <div class="package-box">
-            <h3>🏡 Pacchetto Base<br>Avvio Veloce</h3>
-            <hr class="divider">
-            <p class="description">Ideale per chi desidera avviare la propria attività in autonomia, affidandosi a noi per le operazioni iniziali.</p>
-            <ul>
-               <li>Gestione pratiche amministrative</li>
-               <li>Shooting fotografico e creazione annunci</li>
-               <li>Ottimizzazione SEO e gestione calendario</li>
-            </ul>
-          </div>
-          <div class="package-box">
-            <h3>🔑 Pacchetto Accoglienza<br>Check-in & Ospiti</h3>
-            <hr class="divider">
-            <p class="description">Perfetto per garantire un'accoglienza impeccabile agli ospiti, senza dover gestire direttamente ogni dettaglio.</p>
-            <ul>
-               <li>Gestione prenotazioni e comunicazione ospiti</li>
-               <li>Check-in e check-out professionale</li>
-               <li>Assistenza ospiti 24/7 e gestione guasti</li>
-            </ul>
-          </div>
-          <div class="package-box">
-            <h3>📢 Pacchetto Digitale<br>Visibilità & Strategia</h3>
-            <hr class="divider">
-            <p class="description">Aumenta la visibilità della tua casa con strumenti digitali avanzati e strategie di prezzo efficaci.</p>
-            <ul>
-               <li>Guide digitali personalizzate</li>
-               <li>Ottimizzazione prezzi e Linktree ospiti</li>
-            </ul>
-          </div>
-          <div class="package-box">
-            <h3>📊 Pacchetto Monitoraggio<br>Dati & Report</h3>
-            <hr class="divider">
-            <p class="description">Monitora e analizza le performance della tua casa per massimizzare i guadagni con report dettagliati.</p>
-            <ul>
-               <li>Reportistica avanzata e trend di mercato</li>
-               <li>Accesso alla dashboard H24/7</li>
-            </ul>
-          </div>
-          <div class="package-box">
-            <h3>🌟 Pacchetto All-Inclusive<br>Gestione Completa</h3>
-            <hr class="divider">
-            <p class="description">Non vuoi pensare a nulla? Affidaci tutto e lascia che ci occupiamo noi della gestione completa della tua casa vacanze.</p>
+  
+
+
+ <!-- Sezione 12 Cards (senza bottoni) -->
+<section id="cards-section" class="container my-5">
+  <!-- <h1 style="text-align: center;">Servizi Offerti dall'Agenzia</h1>
+  <p style="text-align: center;">
+    Offriamo 12 servizi per le case vacanze a Roma. Seleziona solo quelli di cui hai bisogno e assembla il tuo pacchetto per una gestione su misura
+  </p> -->
+    <div class="row">
+      <!-- Card 1: Gestione pratiche amministrative -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/law.png" alt="Gestione pratiche amministrative"/>
+            <h5 class="card-title mt-3">Gestione pratiche amministrative</h5>
+            <p class="card-text">Gestione delle pratiche burocratiche per la registrazione e la conformità legale.</p>
           </div>
         </div>
-        <div class="space"></div>
-        <div class="space"></div>
-        <!-- Bottone per scaricare la brochure in formato PDF -->
-        <a href="assets/pdf/brochure.pdf" class="cta-button" download>Scarica la brochure</a>
-        <div class="space"></div>
-        
-        <section class="roadmap">
-            <h2>💡 Compara i servizi inclusi nei pacchetti</h2>
-            <p class="description">Individua l'offerta più adatta alle tue esigenze o contattaci per costruire la tua offerta personalizzata!</p>
-        </section>
-        <table class="service-grid">
-            <thead>
-                <tr>
-                    <th>Servizio</th>
-                    <th>🏡 Base</th>
-                    <th>🔑 Accoglienza</th>
-                    <th>📢 Digitale</th>
-                    <th>📊 Monitoraggio</th>
-                    <th>🌟 All-Inclusive</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Gestione pratiche amministrative</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Shooting fotografico e creazione annunci</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Ottimizzazione SEO e strategia prezzi</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Gestione calendario e prenotazioni</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Check-in e check-out professionale</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Assistenza ospiti 24/7</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Gestione guasti e imprevisti</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Gestione overbooking</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Guide digitali personalizzate</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Creazione Linktree per gli ospiti</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Monitoraggio performance e mercato</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Reportistica avanzata mensile e annuale</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-                <tr>
-                    <td>Accesso alla dashboard H24/7</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>❌</td>
-                    <td>✔️</td>
-                    <td>✔️</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="space"></div>
-        <div class="space"></div>
-        <h3>💡 Non sai quale pacchetto scegliere? Costruisci la tua offerta su misura!</h3>
-        <p class="description">📩 Contattaci per una consulenza gratuita e costruisci la tua offerta personalizzata!</p>
-        <a href="contatti.html" class="cta-button">Contattaci</a>
-        <div class="space"></div>
-        <div class="space"></div>
-    </section>
+      </div>
+  
+      <!-- Card 2: Shooting fotografico e creazione annunci -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/camera--v4.png" alt="Shooting fotografico e creazione annunci"/>
+            <h5 class="card-title mt-3">Shooting fotografico e creazione annunci</h5>
+            <p class="card-text">Servizio fotografico e creazione di annunci ottimizzati per le piattaforme online.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 3: Ottimizzazione SEO e strategia prezzi -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
+            <h5 class="card-title mt-3">Ottimizzazione SEO e strategia prezzi</h5>
+            <p class="card-text">Ottimizzazione del sito e strategia di prezzi per migliorare la visibilità e le vendite.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 4: Gestione calendario e prenotazioni -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/windows/96/calendar.png" alt="Gestione calendario e prenotazioni"/>
+            <h5 class="card-title mt-3">Gestione calendario e prenotazioni</h5>
+            <p class="card-text">Gestione delle prenotazioni e disponibilità online.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 5: Check-in e check-out professionale -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/door.png" alt="Check-in e check-out professionale"/>
+            <h5 class="card-title mt-3">Check-in e check-out professionale</h5>
+            <p class="card-text">Assistenza professionale durante il check-in e check-out degli ospiti.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 6: Assistenza ospiti 24/7 -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/helping-hand.png" alt="Assistenza ospiti 24/7"/>
+            <h5 class="card-title mt-3">Assistenza ospiti 24/7</h5>
+            <p class="card-text">Supporto continuo per gli ospiti, disponibile 24 ore su 24.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 7: Gestione guasti e imprevisti -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/fragile.png" alt="Gestione guasti e imprevisti"/>
+            <h5 class="card-title mt-3">Gestione guasti e imprevisti</h5>
+            <p class="card-text">Gestione rapida di guasti e imprevisti durante il soggiorno.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 8: Gestione overbooking -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/reservation.png" alt="Gestione overbooking"/>
+            <h5 class="card-title mt-3">Gestione overbooking</h5>
+            <p class="card-text">Evita o risolvi situazioni di overbooking per garantire una gestione fluida.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 9: Guide digitali personalizzate -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/tourist-male.png" alt="Guide digitali personalizzate"/>
+            <h5 class="card-title mt-3">Guide digitali personalizzate</h5>
+            <p class="card-text">Creazione di guide digitali personalizzate per ogni casa vacanze.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 10: Creazione Linktree per gli ospiti -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/google-maps.png" alt="Creazione Linktree per gli ospiti"/>
+            <h5 class="card-title mt-3">Creazione Linktree per gli ospiti</h5>
+            <p class="card-text">Raccogli tutte le informazioni utili in un unico link per gli ospiti.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 11: Monitoraggio performance e mercato -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/airbnb.png" alt="Monitoraggio performance e mercato"/> 
+            <h5 class="card-title mt-3">Monitoraggio performance e mercato</h5>
+            <p class="card-text">Analisi delle performance e delle tendenze di mercato per ottimizzare i guadagni.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 12: Reportistica avanzata mensile e annuale -->
+      <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+        <div class="card custom-card-service">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
+            <h5 class="card-title mt-3">Reportistica avanzata mensile e annuale</h5>
+            <p class="card-text">Report dettagliati sulla performance della casa vacanze, mensili e annuali.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
-    <footer>
-        <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
-    </footer>
-    <script src="assets/js/FAQ.js"></script>
+<!-- Sezione Pacchetti & Comparazione -->
+<section id="pacchetti" class="py-5 bg-light">
+  <div class="container text-center mb-5">
+    <h2>Pacchetti</h2>
+    <p class="text-center mb-5">Confronta i servizi inclusi nei nostri pacchetti e seleziona quello più adatto alle tue esigenze</p>
+
+    <!-- Prima riga con i primi 3 pacchetti -->
+    <div class="row">
+      <!-- Card Pacchetto Base -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header text-center">
+            <img class="header-icon" src="https://img.icons8.com/windows/96/home.png" alt="home"/>
+            <h4>Pacchetto Base<br><small class="text-muted">Avvio Veloce</small></h4>
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title pricing-card-title">€550<small class="text-muted">/una-tantum</small></h3>
+            <p>Ideale per chi desidera avviare la propria attività in autonomia, affidandosi a noi per le operazioni iniziali.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check-lg text-dark"></i> Gestione pratiche amministrative</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Shooting fotografico e creazione annunci</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Ottimizzazione SEO e strategia prezzi</li>
+            </ul>
+            <a href="#" class="btn cta-button-pacchetti">Acquista</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card Pacchetto Accoglienza -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header text-center">
+            <img class="header-icon" src="https://img.icons8.com/windows/96/key.png" alt="key"/>
+            <h4>Pacchetto Accoglienza<br><small class="text-muted">Check-in &amp; Ospiti</small></h4>
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title pricing-card-title">€45<small class="text-muted">/prenotazione</small></h3>
+            <p>Perfetto per garantire un'accoglienza impeccabile agli ospiti, senza dover gestire direttamente ogni dettaglio.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check-lg text-dark"></i> Gestione calendario e prenotazioni</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Check-in e check-out professionale</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Assistenza ospiti 24/7</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Gestione guasti e imprevisti</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Gestione overbooking</li>
+            </ul>
+            <a href="#" class="btn cta-button-pacchetti">Acquista</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card Pacchetto All-Inclusive (in terza posizione, evidenziata in rosso) -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header text-center" style="background-color: #ff5a5f !important; color: white;">
+            <img class="header-icon" src="https://img.icons8.com/windows/96/FFFFFF/coliseum.png" alt="coliseum" style="filter: brightness(1)"/>
+            <h4>Pacchetto All-Inclusive<br><small>Gestione Completa</small></h4>
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title pricing-card-title">35% Commissioni<small></small></h3>
+            <p>Non vuoi pensare a nulla? Affidaci tutto e lascia che ci occupiamo noi della gestione completa della tua casa vacanze.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check-lg text-dark"></i> Completa Gestione Operativa e Amministrativa</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Assistenza e Gestione delle Emergenze</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Marketing e Comunicazione Digitale</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Monitoraggio e Analisi</li>
+            </ul>
+            <a href="#" class="btn cta-button-pacchetti">Acquista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Seconda riga per i pacchetti rimanenti, centrata -->
+    <div class="row justify-content-center">
+      <!-- Card Pacchetto Digitale -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header text-center">
+            <img class="header-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
+            <h4>Pacchetto Digitale<br><small class="text-muted">Visibilità &amp; Strategia</small></h4>
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title pricing-card-title">€450<small class="text-muted">/una-tantum</small></h3>
+            <p>Aumenta la visibilità della tua casa con strumenti digitali avanzati e strategie di prezzo efficaci.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check-lg text-dark"></i> Ottimizzazione SEO e strategia prezzi</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Guide digitali personalizzate</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Creazione Linktree per gli ospiti</li>
+            </ul>
+            <a href="#" class="btn cta-button-pacchetti">Acquista</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card Pacchetto Monitoraggio -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+          <div class="card-header text-center">
+            <img class="header-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
+            <h4>
+              Pacchetto Monitoraggio<br>
+              <small class="text-muted">Dati &amp; Report</small>
+            </h4>
+          </div>
+          <div class="card-body text-center">
+            <h3 class="card-title pricing-card-title">€350<small class="text-muted">/mese</small></h3>
+            <p>Monitora e analizza le performance della tua casa per massimizzare i guadagni con report dettagliati.</p>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><i class="bi bi-check-lg text-dark"></i> Monitoraggio performance e mercato</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Reportistica avanzata mensile e annuale</li>
+              <li><i class="bi bi-check-lg text-dark"></i> Accesso alla dashboard H24/7</li>
+            </ul>
+            <a href="#" class="btn cta-button-pacchetti">Acquista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#assembla-pacchetto-section" class="btn cta-button">
+      Assembla il tuo Pacchetto
+    </a>
+  </div>
+</section>
+
+
+
+
+<section class="container mt-5">
+  <h3 class="text-center mb-4">Confronta i Pacchetti</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered text-left text-danger"  style="font-size: 0.95rem;">
+      <thead class="table-light">
+        <thead class="table-light">
+          <tr style="text-align: left; font-size: large;">
+            <th style="width: 30%;">
+              Servizio
+            </th>
+            <th style="width: 10%;">
+              <img class="header-icon" src="https://img.icons8.com/windows/96/home.png" alt="home"/>
+              Base
+            </th>
+            <th style="width: 10%;">
+              <img class="header-icon" src="https://img.icons8.com/windows/96/key.png" alt="key"/>
+              Accoglienza
+            </th>
+            <th style="width: 10%;">
+              <img class="header-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
+              Digitale
+            </th>
+            <th style="width: 10%;">
+              <img class="header-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
+              Monitoraggio
+            </th>
+            <th style="width: 10%;">
+              <img class="header-icon" src="https://img.icons8.com/windows/96/FFFFFF/coliseum.png" alt="coliseum"/>
+              All-Inclusive
+            </th>
+          </tr>
+        </thead>
+      </thead>
+      <tbody style="font-weight: 600;">
+        <tr><td>Gestione pratiche amministrative</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Shooting fotografico e creazione annunci</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Ottimizzazione SEO e strategia prezzi</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Gestione calendario e prenotazioni</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Check-in e check-out professionale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Assistenza ospiti 24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Gestione guasti e imprevisti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Gestione overbooking</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Guide digitali personalizzate</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Creazione Linktree per gli ospiti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Monitoraggio performance e mercato</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Reportistica avanzata mensile e annuale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr><td>Accesso alla dashboard H24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+        <tr style="font-weight: bold;">
+          <td>Prezzo</td>
+          <td>€550</td>
+          <td>€45/Prenotazione</td>
+          <td>€450</td>
+          <td>€350/mese</td>
+          <td>35% Commissioni</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Sezione Assembla il tuo pacchetto -->
+<section id="assembla-pacchetto-section" class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">Assembla il tuo pacchetto</h3>
+    <p class="text-center mb-5">
+      Non sai quale pacchetto scegliere? Costruisci la tua offerta su misura!<br>
+      Contattaci per una consulenza gratuita e costruisci la tua offerta personalizzata!
+    </p>
+    <div class="row justify-content-center">
+
+      <!-- Colonna Sinistra: Checklist -->
+      <div class="col-md-4">
+        <div class="card p-4 mb-4">
+          <h5 class="mb-3">Seleziona i servizi</h5>
+          <form id="custom-package-form">
+            <!-- Lista dei servizi (checkbox) -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio1">
+              <label class="form-check-label" for="servizio1">
+                Gestione pratiche amministrative
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio2">
+              <label class="form-check-label" for="servizio2">
+                Shooting fotografico e creazione annunci
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio3">
+              <label class="form-check-label" for="servizio3">
+                Ottimizzazione SEO e strategia prezzi
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio4">
+              <label class="form-check-label" for="servizio4">
+                Gestione calendario e prenotazioni
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio5">
+              <label class="form-check-label" for="servizio5">
+                Check-in e check-out professionale
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio6">
+              <label class="form-check-label" for="servizio6">
+                Assistenza ospiti 24/7
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio7">
+              <label class="form-check-label" for="servizio7">
+                Gestione guasti e imprevisti
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio8">
+              <label class="form-check-label" for="servizio8">
+                Gestione overbooking
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio9">
+              <label class="form-check-label" for="servizio9">
+                Guide digitali personalizzate
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio10">
+              <label class="form-check-label" for="servizio10">
+                Creazione Linktree per gli ospiti
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio11">
+              <label class="form-check-label" for="servizio11">
+                Monitoraggio performance e mercato
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="servizio12">
+              <label class="form-check-label" for="servizio12">
+                Reportistica avanzata mensile e annuale
+              </label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="servizio13">
+              <label class="form-check-label" for="servizio13">
+                Accesso alla dashboard H24/7
+              </label>
+            </div>
+          </form>
+
+        </div>
+        <!-- Bottone per aprire il pop-up -->
+        <button type="button" class="btn cta-button" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Crea Pacchetto
+        </button>
+      </div>
+      <!-- Colonna Destra: Immagine -->
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+        <img src="assets/img/assemble.png" alt="Immagine Pacchetto" class="img-fluid" style="height: 250px; filter:invert(.7) brightness(1.4);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal di Contatto -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#ff5a5f; color: white;">
+        <h5 class="modal-title" id="contactModalLabel">Contattaci per il Pacchetto Personalizzato</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+      <div class="modal-body">
+        <form id="contact-form">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="messaggio" class="form-label">Messaggio</label>
+            <textarea class="form-control" id="messaggio" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn cta-button">Invia</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Timeline -->
+  <section id="timeline" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Avvia la tua Casa Vacanze</h2>
+      <div class="row text-center">
+        <!-- Step 1 -->
+        <div class="col-12 col-md-3 mb-4">
+          <div class="timeline-step p-3">
+            <div class="timeline-icon mb-3">
+              <i class="bi bi-1-circle-fill display-4"></i>
+            </div>
+            <h5>Troviamo la Formula di affitto</h5>
+            <p>Analizziamo la tua casa, la zona e il mercato per consigliarti la soluzione di affitto più redditizia e adatta alle tue esigenze</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="col-12 col-md-3 mb-4">
+          <div class="timeline-step p-3">
+            <div class="timeline-icon mb-3">
+              <i class="bi bi-2-circle-fill display-4 text-muted"></i>
+            </div>
+            <h5>Prepariamo la casa e la rendiamo visibile</h5>
+            <p>Ci occupiamo di tutti gli aspetti burocratici e operativi per lanciare il tuo immobile in pochi giorni</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="col-12 col-md-3 mb-4">
+          <div class="timeline-step p-3">
+            <div class="timeline-icon mb-3">
+              <i class="bi bi-3-circle-fill display-4 text-secondary"></i>
+            </div>
+            <h5>Gestiamo le prenotazioni e l'ospitalità</h5>
+            <p>Gestiamo ogni aspetto per garantire ai tuoi ospiti un’esperienza eccellente e senza stress per te</p>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="col-12 col-md-3 mb-4">
+          <div class="timeline-step p-3">
+            <div class="timeline-icon mb-3">
+              <i class="bi bi-4-circle-fill display-4 text-danger"></i>
+            </div>
+            <h5>Monitoriamo le performance e i ricavi</h5>
+            <p>Teniamo tutto sotto controllo e ti forniamo dati chiari per ottimizzare i risultati</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS (includendo Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

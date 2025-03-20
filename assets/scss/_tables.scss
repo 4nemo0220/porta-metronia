@@ -1,0 +1,39 @@
+// Riduci il padding per rendere la tabella più compatta
+.table {
+    th, td {
+      padding: 0.4rem; // Abbastanza compatto ma leggibile
+      vertical-align: middle;
+      color:rgba(0, 0, 0, 0.89);
+    }
+  }
+  
+  // Stili per rendere più evidenti e bold le icone (spunte e X)
+  .table i {
+    font-weight: bolder;
+    font-size: 1.4rem; // Aumenta la dimensione per maggiore visibilità
+    line-height: 0.8;
+  }
+  
+  // Cambia lo sfondo dei titoli delle colonne a un grigio più scuro
+  .table thead {
+    background-color: #000000; // Grigio scuro
+    color: #fff; // Testo in bianco per contrasto
+  }
+
+  .header-icon {
+    width: 20px;         // dimensione ridotta
+    height: auto;
+    margin-right: 5px;   // spazio tra icona e testo
+    vertical-align: middle;
+    filter: brightness(0); // rende l'icona nera (se l'immagine originale lo permette)
+  }
+  
+  // Media query per una migliore gestione su dispositivi con schermo ridotto
+  @media (max-width: 768px) {
+    .table {
+      font-size: 0.6rem; // Riduci leggermente il font
+      // Se vuoi far sì che la tabella si adatti senza creare una scrollbar orizzontale,
+      // puoi ridurre ulteriormente i padding o utilizzare un overflow automatico
+    }
+  }
+  

@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/* main.scss */
+/* _variables.scss */
+/* _header.scss */
+/* Navbar con sfondo nero e testo bianco */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+}
+
+/* Navbar Dark, cambio di colore del testo e sfondo */
+.navbar-dark {
+  background-color: #000; /* Sfondo nero */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Testo del brand */
+.navbar-brand .brand-text {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  line-height: 1.2; /* Centra verticalmente rispetto al logo */
+  transition: font-size 0.3s ease;
+  color: #fff; /* Cambiato a bianco per contrasto */
+}
+
+/* Divider tra "Porta Metronia Case Vacanze" e "ROMA" */
+.brand-divider {
+  height: 30px;
+  width: 1px;
+  background-color: #dbd3c6;
+  margin: 0 10px;
+}
+
+/* Navbar Nav (menu a destra) */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Menu a destra */
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.navbar-nav li {
+  margin: 0 10px;
+}
+
+/* Colore bianco per i link */
+.navbar-nav .nav-link {
+  color: #fff !important; /* Cambia il colore dei link a bianco */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.6862745098) !important; /* Cambia colore al passaggio */
+}
+
+/* Menu collassato: impila gli elementi verticalmente */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end; /* Allinea gli elementi a destra anche in modalità mobile */
+  }
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+}
+/* Navbar Toggler Icon */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* Colore del bordo del bottone */
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* Colore bianco per l'icona del menu */
+}
+
+/* _buttons.scss */
+/* CTA Button per navbar, card e altri bottoni */
+.cta-button {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #e04e50;
+  text-decoration: none;
+  color: white;
+}
+
+.cta-button:click {
+  border-color: #ff5a5f;
+  color: #ff5a5f;
+  color: rgb(255, 39, 45.5454545455);
+  background-color: rgb(255, 39, 45.5454545455);
+}
+
+/* Stile per il bottone "Stima i Ricavi" */
+/* _cards.scss */
+/* Fix per il problema dello scroll */
+section[id] {
+  scroll-margin-top: 80px; /* Modifica il valore in base all'altezza della navbar */
+}
+
+/* Stile migliorato per le card */
+.custom-card {
+  min-height: 320px;
+  background-color: #f8f9fa; /* Grigetto di sfondo */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Icona in alto a destra */
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.custom-card .card-icon {
+  width: 64px;
+  height: 64px;
+  color: #333; /* Colore dell'icona (puoi cambiare il colore) */
+  z-index: 1; /* Assicurati che l'icona sia sopra gli altri contenuti */
+  margin-bottom: 20px;
+}
+.custom-card .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.custom-card .card-text {
+  font-size: 14px;
+  color: #666;
+}
+.custom-card .btn-primary {
+  background-color: #ff5a5f; /* Stesso colore del CTA */
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Freccia nel bottone */
+}
+.custom-card .btn-primary:hover {
+  background-color: #e04e50;
+}
+.custom-card .btn-primary .btn-icon {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+.custom-card-service {
+  min-height: 280px;
+  padding: 3%;
+  border: none;
+  background-color: rgba(211, 211, 211, 0.822);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Icona in alto a destra */
+}
+.custom-card-service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.custom-card-service .card-icon {
+  width: 64px;
+  height: 64px;
+  color: #333; /* Colore dell'icona (puoi cambiare il colore) */
+  background-color: #ff5a5f;
+  border-radius: 10px;
+  z-index: 1; /* Assicurati che l'icona sia sopra gli altri contenuti */
+  margin-bottom: 5px;
+  padding: 3%;
+}
+
+.card.border-primary .card-header {
+  background-color: #ff5a5f !important;
+  color: #fff;
+}
+
+/* SCSS Custom per la sezione Pacchetti */
+#pacchetti .card {
+  border-color: #ff5a5f;
+  /*.card-header {
+    background-color: #dbd3c68f !important; // Sfondo rosso per il titolo
+  }
+    */
+}
+#pacchetti .card .card-body {
+  padding: 2rem;
+}
+#pacchetti .card .card-body ul {
+  text-align: left;
+  padding-left: 1.25rem;
+  font-size: 14px;
+}
+#pacchetti .card .header-icon {
+  position: absolute;
+  left: 20px;
+  top: 9%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: auto;
+  filter: brightness(0);
+}
+#pacchetti .cta-button-pacchetti {
+  align-self: last baseline;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #ff5a5f;
+  color: #ff5a5f;
+  background-color: transparent;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#pacchetti .cta-button-pacchetti:hover {
+  background-color: #ff5a5f;
+  color: #fff;
+}
+#pacchetti .package-highlight .card.border-primary {
+  border: 1px solid #ff5a60;
+}
+#pacchetti .package-highlight .card-header {
+  background-color: rgba(255, 90, 96, 0.6705882353) !important;
+  color: #fff;
+}
+
+.rounded-box {
+  border-radius: 15px; /* Angoli smussati */
+  background-color: #f8f9fa; /* Sfondo chiaro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Altezza uniforme per tutte le colonne */
+}
+
+.custom-img {
+  width: 100%; /* L'immagine occupa tutta la larghezza del box */
+  height: 100%; /* L'immagine occupa tutta l'altezza del box */
+  object-fit: cover; /* Ritaglia l'immagine per coprire l'intero spazio senza deformarsi */
+  border-radius: 15px; /* Se vuoi che anche l'immagine abbia angoli smussati */
+}
+
+/* _sections.scss */
+/* Ogni sezione di dettaglio occupa almeno l'intera viewport e ha un offset per evitare che la navbar copra il contenuto */
+.detail-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* scroll-margin-top assicura che lo smooth scroll lasci uno spazio in alto */
+  scroll-margin-top: 80px;
+  /* Se preferisci un padding top per allineare il contenuto */
+  padding-top: 80px;
+}
+
+/* _footer.scss */
+footer {
+  font-family: "Inter", sans-serif;
+}
+footer p {
+  margin: 0;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(255, 90, 95, 0.1);
+  color: rgb(0, 0, 0);
+  font-weight: 650;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 90, 95, 0.3);
+}
+
+.accordion-button {
+  color: #000000;
+}
+
+.accordion-button:hover {
+  background-color: rgba(255, 90, 95, 0.2);
+}
+
+.feature-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.table th, .table td {
+  padding: 0.4rem;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.89);
+}
+
+.table i {
+  font-weight: bolder;
+  font-size: 1.4rem;
+  line-height: 0.8;
+}
+
+.table thead {
+  background-color: #000000;
+  color: #fff;
+}
+
+.header-icon {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+  vertical-align: middle;
+  filter: brightness(0);
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.6rem;
+  }
+}
+/* Cambia il colore del bordo e dell'ombra delle checkbox non selezionate */
+.form-check-input {
+  border-color: #ff5a5f;
+  background-color: white;
+}
+
+/* Cambia il colore di sfondo e del bordo quando la checkbox è selezionata */
+.form-check-input:checked {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+/* Cambia il colore dell'ombra quando la checkbox viene cliccata */
+.form-check-input:focus {
+  border-color: #ff5a5f;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+.form-control:focus {
+  border-color: #ff5a5f;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+/* Abilita lo smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Altri stili personalizzati per titoli, testo, ecc. */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p, li, a {
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=main.css.map */

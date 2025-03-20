@@ -1,107 +1,540 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestione Case Vacanze - Roma</title>
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Porta Metronia Case Vacanze</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Custom CSS (compilato da SCSS) -->
+   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <!-- HOME button -->
-        <div class="home">
-            <a href="index.html" class="brand">
-                <img src="logo.png" alt="Logo" class="logo">
-                <span>Porta Metronia Case Vacanze</span>
-                <div class="divider"></div>
-                <span class="roma-text">ROMA</span>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+    </symbol>
+  </svg>
+
+<body>
+<!-- Navbar (Header) -->
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
+
+          <span class="brand-text">Porta Metronia Case Vacanze</span>
+          <div class="brand-divider"></div>
+          <span class="brand-text" style="margin-left: 0px">ROMA</span>
+
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
+            <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
+            <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+            <li class="nav-item">
+              <a class="cta-button nav-link" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Hero Section -->
+  <section class="px-4 py-5 my-5 text-center">
+    <div class="container">
+      <img class="d-block mx-auto mb-4" src="assets/img/logo.png" alt="logo" height="100px">
+      <h1 class="jumbotron-heading">Porta Metronia Case Vacanze</h1>
+      <p class="lead text-muted">Gestisci al meglio la tua casa vacanze a Roma</p>
+      <p>
+        <a href="#cards-section" class="cta-button">Scopri di più</a>
+      </p>
+      <div class="b-example-divider"></div>
+    </div>
+  </section>
+
+
+  <!-- Sezione 6 Cards -->
+  <section id="cards-section" class="container my-5">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios-glyphs/90/money--v1.png" alt="money--v1"/>
+            <h5 class="card-title">Potenzialità di Guadagno</h5>
+            <p class="card-text">Scopri come massimizzare i guadagni.</p>
+            <a href="#section1" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
             </a>
-
+          </div>
         </div>
-        <!-- MENU -->
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="servizi.html">Servizi & Prezzi</a></li>
-                    <li><a href="analytics.html">AI & Analytics</a></li>
-                    <li><a href="contatti.html">Contatti</a></li>
-                    <li><a href="stima.html" class="cta-button">Avvia la tua casa</a></li>
-                </ul>
-            </nav>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <!-- <img src="assets/img/santangelo.jpg" class="card-img-top" alt="Servizi Offerti"> -->
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/windows/64/home.png" alt="home"/>
+
+            <h5 class="card-title">Servizi Offerti</h5>
+            <p class="card-text">Tutti i servizi per una gestione completa.</p>
+            <a href="#section2" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </header>
-
-    <!-- HOME PAGE -->
-    <section>
-        <!-- SERVIZI -->
-        <div class="servizi"></div>
-            <h2>I Nostri Servizi</h2>
-            <div class="divider-thin"></div>
-            <p class="description">
-                Gestiamo case vacanze con gioia ed amore per la città di Roma da più di 15 anni<br>
-                Puntiamo all’eccellenza e alla soddisfazione dei nostri ospiti e dei nostri proprietari<br><br>
-                🏛 Roma, la tua casa lontano da casa<br>
-                💛 Accogliamo con il cuore, gestiamo con passione<br>
-                🏡 Ospitalità autentica, esperienze indimenticabili<br>
-                🔑 La tua casa vacanze, curata come fosse nostra</p>
-            <div class="space"></div>
-            <div class="services-grid">
-                <div class="service-box" onclick="location.href='#gestione'">Casa Vacanze</div>
-                <div class="service-box" onclick="location.href='#affitti'">Affitti Brevi</div>
-                <div class="service-box" onclick="location.href='#cohosting'">Co-hosting</div>
-                <div class="service-box" onclick="location.href='#analytics'">AI & Analytics</div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/material-outlined/96/percentage.png" alt="percentage"/>
+            <h5 class="card-title">Costi e Commissioni</h5>
+            <p class="card-text">Confronta costi e guadagni.</p>
+            <a href="#section3" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </section>
-
-    <section id="gestione" class="service-section">
-        <img src="gestione.png" alt="Gestione Casa Vacanze">
-        <div class="service-text">
-            <h2>Gestione Case Vacanze</h2>
-            <p>Gestiamo la tua casa vacanze in modo professionale e ottimizzato per massimizzare i guadagni.</p>
-            <button class="download-btn">Scarica la brochure</button>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios-filled/50/graph.png" alt="graph"/>
+            <h5 class="card-title">Promozione e Visibilità</h5>
+            <p class="card-text">Ottimizza la visibilità del tuo annuncio.</p>
+            <a href="#section4" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </section>
-
-    <section id="affitti" class="service-section">
-        <img src="affitti.png" alt="Affitti Brevi">
-        <div class="service-text">
-            <h2>Affitti Brevi</h2>
-            <p>Ottimizziamo il tuo immobile per affitti brevi su Airbnb e altre piattaforme.</p>
-            <button class="download-btn">Scarica la brochure</button>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/ios/100/law.png" alt="law"/>
+            <h5 class="card-title">Requisiti e Normative</h5>
+            <p class="card-text">Tutto ciò che devi sapere per operare legalmente.</p>
+            <a href="#section5" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </section>
-
-    <section id="cohosting" class="service-section">
-        <img src="cohosting.png" alt="Co-Hosting">
-        <div class="service-text">
-            <h2>Co-Hosting</h2>
-            <p>Offriamo supporto per check-in, pulizie e gestione degli ospiti.</p>
-            <button class="download-btn">Scarica la brochure</button>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <img class="card-icon" src="https://img.icons8.com/windows/96/calendar.png" alt="calendar"/>
+            <h5 class="card-title">Flessibilità del Proprietario</h5>
+            <p class="card-text">Gestisci le prenotazioni in totale autonomia.</p>
+            <a href="#section6" class="btn btn-primary">
+              Scopri di più <i class="btn-icon fas fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="analytics" class="service-section">
-        <img src="analytics.png" alt="Analytics e Consulenza">
-        <div class="service-text">
-            <h2>Analytics & Consulenza</h2>
-            <p>Utilizziamo dati avanzati per ottimizzare le tue prenotazioni e migliorare i tuoi annunci.</p>
-            <button class="download-btn">Scarica la brochure</button>
+  <!-- Sezioni di Dettaglio (6 sezioni, una per ogni card) -->
+  <!-- Sezione 1: Potenzialità di Guadagno (Testo a sinistra, Immagine a destra) -->
+  <section id="section1" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6">
+        <h2>Potenzialità di Guadagno</h2>
+        <p>Scopri come massimizzare i guadagni affittando la tua casa vacanze.</p>
+        <div class="accordion rounded border p-3" id="accordionSection1">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec1" aria-expanded="true" aria-controls="collapse1Sec1">
+                Quanto posso guadagnare affittando la mia casa come casa vacanze?
+              </button>
+            </h2>
+            <div id="collapse1Sec1" class="accordion-collapse collapse show" aria-labelledby="heading1Sec1">
+              <div class="accordion-body">
+                I guadagni dipendono da diversi fattori, tra cui la posizione, la stagionalità e le caratteristiche dell'immobile. Utilizziamo dati reali da Airbnb per offrirti una stima precisa dei tuoi guadagni netti, considerando i costi di gestione e le tasse applicabili. A differenza di Airbnb, la nostra app calcola il netto effettivo che puoi ottenere, fornendoti una previsione ancora più accurata.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec1" aria-expanded="false" aria-controls="collapse2Sec1">
+                Qual è la redditività rispetto all'affitto tradizionale?
+              </button>
+            </h2>
+            <div id="collapse2Sec1" class="accordion-collapse collapse" aria-labelledby="heading2Sec1">
+              <div class="accordion-body">
+                Le case vacanze possono garantire un rendimento superiore grazie alla flessibilità delle tariffe e alla possibilità di adattare i prezzi in base alla domanda stagionale. Rispetto agli affitti a lungo termine, puoi ottenere una maggiore entrata annuale e una gestione più dinamica del tuo immobile.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec1" aria-expanded="false" aria-controls="collapse3Sec1">
+                Ci sono stime basate su dati reali per la mia zona?
+              </button>
+            </h2>
+            <div id="collapse3Sec1" class="accordion-collapse collapse" aria-labelledby="heading3Sec1">
+              <div class="accordion-body">
+                Sì! Grazie alla nostra app di stima, puoi scoprire in pochi secondi il potenziale della tua proprietà. Utilizziamo dati aggiornati sul mercato locale per offrirti un'analisi personalizzata e aiutarti a prendere decisioni informate sul tuo investimento.
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <button onclick="topFunction()" id="BackToTopBtn" title="Go to top">Top</button> 
-    <section id="contatti">
-        <h2>Contattaci</h2>
-        <p>Email: <a href="mailto:info@tuodominio.com">info@portametronia.com</a></p>
-        <p>Telefono: +39 333 333 3333</p>
-    </section>
+        <a href="https://stima-casa.streamlit.app/" class="cta-button" style="margin-top: 20px; font-weight: 600" target="_blank">Stima i Ricavi con la nostra App  <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Colonna destra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>      
+    </div>
+  </section>
 
 
-    <footer>
-        <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
-    </footer>
+  <!-- Sezione 2: Servizi Offerti dall'Agenzia (Immagine a sinistra, Testo a destra) -->
+  <section id="section2" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>    
+      <!-- Colonna destra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6 order-md-2">
+        <h2>Servizi Offerti dall'Agenzia</h2>
+        <p>Scopri la nostra offerta di gestione flessibile: da una gestione completa a servizi parziali, in base alle tue esigenze.</p>
+        <div class="accordion rounded border p-3" id="accordionSection2">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec2">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec2" aria-expanded="true" aria-controls="collapse1Sec2">
+                Di cosa si occupa l'agenzia? Gestione completa o parziale?
+              </button>
+            </h2>
+            <div id="collapse1Sec2" class="accordion-collapse collapse show" aria-labelledby="heading1Sec2">
+              <div class="accordion-body">
+                L’agenzia offre soluzioni personalizzate: puoi optare per una gestione completa oppure scegliere solo alcuni servizi in base alle tue necessità.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec2" aria-expanded="false" aria-controls="collapse2Sec2">
+                Chi si occupa di pulizia, check-in/out e manutenzione?
+              </button>
+            </h2>
+            <div id="collapse2Sec2" class="accordion-collapse collapse" aria-labelledby="heading2Sec2">
+              <div class="accordion-body">
+                Abbiamo un team specializzato che gestisce pulizie, check-in/out e manutenzione, garantendo un servizio professionale e senza intoppi.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec2" aria-expanded="false" aria-controls="collapse3Sec2">
+                Come viene gestito il rapporto con gli ospiti?
+              </button>
+            </h2>
+            <div id="collapse3Sec2" class="accordion-collapse collapse" aria-labelledby="heading3Sec2">
+              <div class="accordion-body">
+                Il nostro staff si occupa di tutte le comunicazioni, garantendo assistenza tempestiva e una gestione professionale per il massimo comfort degli ospiti.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4Sec2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4Sec2" aria-expanded="false" aria-controls="collapse4Sec2">
+                L'agenzia si occupa della registrazione presso il Comune e delle tasse?
+              </button>
+            </h2>
+            <div id="collapse4Sec2" class="accordion-collapse collapse" aria-labelledby="heading4Sec2">
+              <div class="accordion-body">
+                Sì, ti supportiamo in tutte le pratiche burocratiche, dalla registrazione presso il Comune alla gestione della tassa di soggiorno.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="servizi.html" class="cta-button" style="margin-top: 20px; font-weight: 600">Servizi & Pacchetti <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione 3: Costi e Commissioni (Testo a sinistra, Immagine a destra) -->
+  <section id="section3" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6">
+        <h2>Costi e Commissioni</h2>
+        <p>Analizza in modo trasparente i costi del servizio e le commissioni applicate per una gestione efficiente della tua casa vacanze.</p>
+        <div class="accordion rounded border p-3" id="accordionSection3">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec3">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec3" aria-expanded="true" aria-controls="collapse1Sec3">
+                Quanto costa il servizio dell’agenzia?
+              </button>
+            </h2>
+            <div id="collapse1Sec3" class="accordion-collapse collapse show" aria-labelledby="heading1Sec3">
+              <div class="accordion-body">
+                I costi dipendono dal pacchetto scelto, generalmente compresi tra il 10% e il 20% del guadagno mensile.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec3" aria-expanded="false" aria-controls="collapse2Sec3">
+                Quali sono le commissioni o percentuali sugli incassi?
+              </button>
+            </h2>
+            <div id="collapse2Sec3" class="accordion-collapse collapse" aria-labelledby="heading2Sec3">
+              <div class="accordion-body">
+                Le commissioni sono trasparenti e variano dal 3% al 15% degli incassi lordi, a seconda dei servizi richiesti.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec3" aria-expanded="false" aria-controls="collapse3Sec3">
+                Ci sono costi nascosti o vincoli contrattuali?
+              </button>
+            </h2>
+            <div id="collapse3Sec3" class="accordion-collapse collapse" aria-labelledby="heading3Sec3">
+              <div class="accordion-body">
+                Non ci sono costi nascosti: il contratto specifica chiaramente tutti i termini, senza vincoli onerosi.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="servizi.html" class="cta-button" style="margin-top: 20px; font-weight: 600">Costi & Commissioni <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Colonna destra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>    
+    </div>
+  </section>
+
+  <!-- Sezione 4: Promozione e Visibilità dell'Annuncio (Immagine a sinistra, Testo a destra) -->
+  <section id="section4" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>    
+      <!-- Colonna destra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6 order-md-2">
+        <h2>Promozione e Visibilità dell'Annuncio</h2>
+        <p>Massimizza la visibilità del tuo immobile con strategie di marketing integrate e presenza sulle principali piattaforme.</p>
+        <div class="accordion rounded border p-3" id="accordionSection4">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec4">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec4" aria-expanded="true" aria-controls="collapse1Sec4">
+                Su quali piattaforme verrà pubblicizzata la mia casa (Airbnb, Booking, Vrbo...)?
+              </button>
+            </h2>
+            <div id="collapse1Sec4" class="accordion-collapse collapse show" aria-labelledby="heading1Sec4">
+              <div class="accordion-body">
+                Promuoviamo il tuo immobile su Airbnb, Booking, Vrbo e altre piattaforme internazionali per massimizzare le opportunità di prenotazione.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec4" aria-expanded="false" aria-controls="collapse2Sec4">
+                L’agenzia si occupa della fotografia e della descrizione dell’annuncio?
+              </button>
+            </h2>
+            <div id="collapse2Sec4" class="accordion-collapse collapse" aria-labelledby="heading2Sec4">
+              <div class="accordion-body">
+                Sì, i nostri professionisti curano fotografie di alta qualità e testi descrittivi per valorizzare al meglio il tuo immobile.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec4" aria-expanded="false" aria-controls="collapse3Sec4">
+                Viene ottimizzata la visibilità per aumentare le prenotazioni?
+              </button>
+            </h2>
+            <div id="collapse3Sec4" class="accordion-collapse collapse" aria-labelledby="heading3Sec4">
+              <div class="accordion-body">
+                Utilizziamo strategie SEO e campagne di marketing digitale per incrementare la visibilità e le prenotazioni del tuo immobile.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="servizi.html" class="cta-button" style="margin-top: 20px; font-weight: 600">SEO & Promozione Annunci <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione 5: Requisiti e Normative (Testo a sinistra, Immagine a destra) -->
+  <section id="section5" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6">
+        <h2>Requisiti e Normative</h2>
+        <p>Assicurati che il tuo immobile rispetti tutte le normative e i requisiti per essere affittato come casa vacanze.</p>
+        <div class="accordion rounded border p-3" id="accordionSection5">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec5">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec5" aria-expanded="true" aria-controls="collapse1Sec5">
+                La mia casa è idonea per essere affittata come casa vacanze?
+              </button>
+            </h2>
+            <div id="collapse1Sec5" class="accordion-collapse collapse show" aria-labelledby="heading1Sec5">
+              <div class="accordion-body">
+                Verifichiamo insieme se il tuo immobile rispetta i requisiti di sicurezza e le normative locali necessarie.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec5" aria-expanded="false" aria-controls="collapse2Sec5">
+                Quali permessi e adempimenti burocratici servono a Roma?
+              </button>
+            </h2>
+            <div id="collapse2Sec5" class="accordion-collapse collapse" aria-labelledby="heading2Sec5">
+              <div class="accordion-body">
+                Per Roma è necessario registrare l’immobile presso il Comune e ottenere specifici permessi, come il Codice Identificativo Regionale (CIR).
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec5" aria-expanded="false" aria-controls="collapse3Sec5">
+                L’agenzia aiuta con l’ottenimento del Codice Identificativo Regionale (CIR) e la gestione della tassa di soggiorno?
+              </button>
+            </h2>
+            <div id="collapse3Sec5" class="accordion-collapse collapse" aria-labelledby="heading3Sec5">
+              <div class="accordion-body">
+                Certamente, ti assistiamo in tutte le pratiche burocratiche, dalla richiesta del CIR alla gestione della tassa di soggiorno.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="servizi.html" class="cta-button" style="margin-top: 20px; font-weight: 600">Guida Pratiche Amministrative <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Colonna destra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>    
+    </div>
+  </section>
+
+  <!-- Sezione 6: Flessibilità e Controllo del Proprietario (Immagine a sinistra, Testo a destra) -->
+  <section id="section6" class="container my-5">
+    <div class="row align-items-center">
+      <!-- Colonna sinistra: Immagine -->
+      <div class="col-md-6">
+        <div class="rounded-box d-flex justify-content-center align-items-center">
+          <img src="assets/img/santangelo.jpg" alt="Dettaglio Guadagno" class="img-fluid custom-img" >
+        </div>
+      </div>    
+      <!-- Colonna destra: Titolo, descrizione, accordion e CTA -->
+      <div class="col-md-6 order-md-2">
+        <h2>Flessibilità e Controllo del Proprietario</h2>
+        <p>Gestisci la disponibilità del tuo immobile in base alle tue esigenze, monitorando prenotazioni e guadagni in tempo reale.</p>
+        <div class="accordion rounded border p-3" id="accordionSection6">
+          <!-- Domanda 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1Sec6">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1Sec6" aria-expanded="true" aria-controls="collapse1Sec6">
+                Posso decidere quando e quanto mettere in affitto la mia casa?
+              </button>
+            </h2>
+            <div id="collapse1Sec6" class="accordion-collapse collapse show" aria-labelledby="heading1Sec6">
+              <div class="accordion-body">
+                Assolutamente: puoi impostare le date e le tariffe in base alle tue preferenze e alla stagionalità.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2Sec6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2Sec6" aria-expanded="false" aria-controls="collapse2Sec6">
+                Ho la possibilità di usarla personalmente in determinati periodi?
+              </button>
+            </h2>
+            <div id="collapse2Sec6" class="accordion-collapse collapse" aria-labelledby="heading2Sec6">
+              <div class="accordion-body">
+                Sì, la gestione flessibile ti permette di prenotare l’immobile per uso personale quando ne hai bisogno.
+              </div>
+            </div>
+          </div>
+          <!-- Domanda 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3Sec6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3Sec6" aria-expanded="false" aria-controls="collapse3Sec6">
+                Come posso monitorare le prenotazioni e i guadagni?
+              </button>
+            </h2>
+            <div id="collapse3Sec6" class="accordion-collapse collapse" aria-labelledby="heading3Sec6">
+              <div class="accordion-body">
+                Mettiamo a disposizione una dashboard dedicata e report periodici per tenere sotto controllo prenotazioni e guadagni in tempo reale.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="servizi.html" class="cta-button" style="margin-top: 20px; font-weight: 600">Gestisci Calendario Online <i class="btn-icon fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0">© 2025 Porta Metronia Case Vacanze - Tutti i diritti riservati</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap e JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

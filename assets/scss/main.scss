@@ -1,0 +1,25 @@
+/* main.scss */
+@import 'variables';
+@import 'header';
+@import 'buttons';
+@import 'cards';
+@import 'sections';
+@import 'footer';
+@import 'accordion';
+@import 'feature_box';
+@import 'tables';
+@import 'checklist';
+
+/* Abilita lo smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Altri stili personalizzati per titoli, testo, ecc. */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p, li, a {
+  font-weight: 400;
+}

@@ -1,0 +1,92 @@
+/* _header.scss */
+
+/* Navbar con sfondo nero e testo bianco */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar */
+.navbar {
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+}
+
+/* Navbar Dark, cambio di colore del testo e sfondo */
+.navbar-dark {
+  background-color: #000; /* Sfondo nero */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Testo del brand */
+.navbar-brand .brand-text {
+  margin-left: 10px;
+  font-size: 1.3rem;
+  line-height: 1.2; /* Centra verticalmente rispetto al logo */
+  transition: font-size 0.3s ease;
+  color: #fff; /* Cambiato a bianco per contrasto */
+}
+
+/* Divider tra "Porta Metronia Case Vacanze" e "ROMA" */
+.brand-divider {
+  height: 30px;
+  width: 1px;
+  background-color: #dbd3c6;
+  margin: 0 10px;
+}
+
+/* Navbar Nav (menu a destra) */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Menu a destra */
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.navbar-nav li {
+  margin: 0 10px;
+
+}
+
+/* Colore bianco per i link */
+.navbar-nav .nav-link {
+  color: #fff !important; /* Cambia il colore dei link a bianco */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffffaf !important; /* Cambia colore al passaggio */
+}
+
+/* Menu collassato: impila gli elementi verticalmente */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end; /* Allinea gli elementi a destra anche in modalità mobile */
+  }
+
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* Colore del bordo del bottone */
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1); /* Colore bianco per l'icona del menu */
+}

@@ -1,0 +1,20 @@
+// Feature Box: box grigio chiaro, angoli smussati e effetto hover
+.feature-box {
+    background-color: #f8f9fa; // grigetto chiaro
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  // Icon Box: quadratino colorato con dimensioni fisse
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+  

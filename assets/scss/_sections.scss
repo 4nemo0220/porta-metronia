@@ -1,0 +1,12 @@
+/* _sections.scss */
+/* Ogni sezione di dettaglio occupa almeno l'intera viewport e ha un offset per evitare che la navbar copra il contenuto */
+.detail-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* scroll-margin-top assicura che lo smooth scroll lasci uno spazio in alto */
+    scroll-margin-top: 80px;
+    /* Se preferisci un padding top per allineare il contenuto */
+    padding-top: 80px;
+  }
+  
