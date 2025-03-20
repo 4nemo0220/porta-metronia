@@ -75,7 +75,7 @@ def simulate_occupazione(df, occ, tax_rate=10):
 ######################################### APP
 
 # *SIDEBAR
-st.sidebar.image("assets/img/logo.png", width=100)
+st.sidebar.image("./assets/img/logo.png", width=100)
 st.sidebar.header("Porta Metronia Case Vacanze")
 st.sidebar.divider()
 st.sidebar.subheader("Steps:")
