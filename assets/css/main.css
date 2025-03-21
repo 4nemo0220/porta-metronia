@@ -97,28 +97,122 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 180px;
+  border: 2px solid transparent;
+}
+
+.cta-button:hover,
+.cta-button:focus,
+.cta-button:active {
+  background-color: white;
+  color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+/* Se al click persiste il problema, forziamo con !important */
+.cta-button:active {
+  background-color: white !important;
+  color: #ad3e42 !important;
+  border-color: #ad3e42 !important;
+}
+
+.cta-button-pacchetti {
+  align-self: last baseline;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 180px;
+  box-sizing: border-box;
+  border: 2px solid #ff5a5f;
+  color: #ff5a5f;
+  background-color: transparent;
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.cta-button-pacchetti:hover {
+  background-color: #ff5a5f;
+  color: #fff;
+}
+.cta-button-pacchetti:active {
+  background-color: #ad3e42 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.header-button {
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
   transition: background-color 0.3s ease;
   display: inline-block;
 }
 
-.cta-button:hover {
+.header-button:hover {
   background-color: #e04e50;
   text-decoration: none;
   color: white;
 }
 
-.cta-button:click {
-  border-color: #ff5a5f;
-  color: #ff5a5f;
+.header-button:active {
+  color: #ad3e42;
   color: rgb(255, 39, 45.5454545455);
   background-color: rgb(255, 39, 45.5454545455);
 }
 
-/* Stile per il bottone "Stima i Ricavi" */
+#scrollToTopBtn {
+  width: 40px; /* Larghezza fissa */
+  height: 40px; /* Altezza fissa */
+  border: 2px solid rgb(102, 102, 102); /* Bordo per creare il cerchio */
+  border-radius: 50%; /* Arrotonda per rendere il bottone circolare */
+  display: flex; /* Flex per centrare il contenuto */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra orizzontalmente */
+  position: fixed;
+  left: 85%; /* Posizionato all'85% dal bordo sinistro */
+  bottom: 20px; /* Distanza dal fondo */
+  z-index: 100;
+  transition: opacity 0.7s ease-in-out, border-color 0.3s ease, background-color 0.3s ease;
+  background: transparent; /* Sfondo trasparente */
+  cursor: pointer;
+}
+
+#scrollToTopBtn i {
+  font-size: 1.6rem;
+  background: none;
+  transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+  color: rgb(102, 102, 102);
+  filter: brightness(1.2);
+  margin: 0;
+  line-height: 1;
+  /* Aumenta lo spessore del tratto dell'icona, se supportato */
+  -webkit-text-stroke: 2px rgb(102, 102, 102);
+}
+
+#scrollToTopBtn:active i {
+  color: #eee; /* Colore più light quando il bottone è cliccato */
+  -webkit-text-stroke: 1px #eee; /* Anche il tratto diventa più chiaro */
+}
+
+#scrollToTopBtn:active {
+  border-color: #eee; /* Cambia il colore del bordo al click */
+  background-color: #333; /* Sfondo dark gray per un contrasto migliore */
+}
+
 /* _cards.scss */
 /* Fix per il problema dello scroll */
 section[id] {
-  scroll-margin-top: 80px; /* Modifica il valore in base all'altezza della navbar */
+  scroll-margin-top: 60px; /* Modifica il valore in base all'altezza della navbar */
 }
 
 /* Stile migliorato per le card */
@@ -172,7 +266,7 @@ section[id] {
   min-height: 280px;
   padding: 3%;
   border: none;
-  background-color: rgba(211, 211, 211, 0.822);
+  background-color: rgb(211, 211, 211);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Icona in alto a destra */
@@ -204,6 +298,11 @@ section[id] {
     background-color: #dbd3c68f !important; // Sfondo rosso per il titolo
   }
     */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#pacchetti .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 #pacchetti .card .card-body {
   padding: 2rem;
@@ -222,29 +321,11 @@ section[id] {
   height: auto;
   filter: brightness(0);
 }
-#pacchetti .cta-button-pacchetti {
-  align-self: last baseline;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1.5px solid #ff5a5f;
-  color: #ff5a5f;
-  background-color: transparent;
-  padding: 0.5rem;
-  text-align: center;
-  font-weight: 700;
-  font-size: 18;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-#pacchetti .cta-button-pacchetti:hover {
-  background-color: #ff5a5f;
-  color: #fff;
-}
-#pacchetti .package-highlight .card.border-primary {
+
+.package-highlight .card.border-primary {
   border: 1px solid #ff5a60;
 }
-#pacchetti .package-highlight .card-header {
+.package-highlight .card-header {
   background-color: rgba(255, 90, 96, 0.6705882353) !important;
   color: #fff;
 }
@@ -263,6 +344,19 @@ section[id] {
   height: 100%; /* L'immagine occupa tutta l'altezza del box */
   object-fit: cover; /* Ritaglia l'immagine per coprire l'intero spazio senza deformarsi */
   border-radius: 15px; /* Se vuoi che anche l'immagine abbia angoli smussati */
+}
+
+.service-box {
+  border: 2px solid #ff5a5f; /* Bordo visibile con colore */
+  padding: 20px 20px 0px 20px; /* Riduci il padding inferiore */
+  border-radius: 10px; /* Angoli smussati */
+  margin-bottom: 40px;
+}
+
+/* Rimuovi o riduci il margine inferiore dalla sezione e dai suoi componenti */
+#cards-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* _sections.scss */
@@ -320,16 +414,30 @@ footer p {
   font-size: 1.5rem;
 }
 
-.table th, .table td {
+#confronta-pacchetti .table tr,
+td {
+  text-align: center;
+  font-size: medium;
+  vertical-align: middle;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.servizio {
+  text-align: left;
+}
+
+.table th {
+  font-size: large;
   padding: 0.4rem;
   vertical-align: middle;
-  color: rgba(0, 0, 0, 0.89);
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 .table i {
   font-weight: bolder;
   font-size: 1.4rem;
-  line-height: 0.8;
+  line-height: 0.7;
 }
 
 .table thead {
@@ -343,11 +451,31 @@ footer p {
   margin-right: 5px;
   vertical-align: middle;
   filter: brightness(0);
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
-  .table {
+  .table i {
+    font-weight: bolder;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .table tr, td {
     font-size: 0.6rem;
+  }
+  .servizio {
+    font-size: 0.68rem;
+  }
+  .table th {
+    vertical-align: middle;
+    font-size: 0.7rem;
+  }
+  .table th {
+    justify-content: center;
+  }
+  /* Rimuove il margine a destra e aggiunge margine inferiore all'icona */
+  .header-icon {
+    margin-bottom: 0.5rem;
   }
 }
 /* Cambia il colore del bordo e dell'ombra delle checkbox non selezionate */

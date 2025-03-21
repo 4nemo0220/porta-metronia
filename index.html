@@ -19,38 +19,35 @@
   </svg>
 
 <body>
-<!-- Navbar (Header) -->
   <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
-
-          <span class="brand-text">Porta Metronia Case Vacanze</span>
-          <div class="brand-divider"></div>
-          <span class="brand-text" style="margin-left: 0px">ROMA</span>
-
-        </a>
+        <!-- Bottone Toggler sempre visibile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <!-- Collapsible Menu (che include anche il brand) -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <a class="navbar-brand d-flex align-items-center mb-3 mb-lg-0 me-lg-auto mobile-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
+            <span class="brand-text d-none d-lg-inline-block">Porta Metronia Case Vacanze</span>
+            <div class="brand-divider d-none d-lg-inline-block"></div>
+            <span class="brand-text d-none d-lg-inline-block">ROMA</span>
+          </a>
+          <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
             <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
             <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
             <li class="nav-item">
-              <a class="cta-button nav-link" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
+              <a class="header-button" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-
-
 
   <!-- Hero Section -->
   <section class="px-4 py-5 my-5 text-center">
@@ -155,7 +152,7 @@
 
   <!-- Sezioni di Dettaglio (6 sezioni, una per ogni card) -->
   <!-- Sezione 1: Potenzialità di Guadagno (Testo a sinistra, Immagine a destra) -->
-  <section id="section1" class="container my-5">
+  <section id="section1" class="container my-5 py-5">
     <div class="row align-items-center">
       <!-- Colonna sinistra: Titolo, descrizione, accordion e CTA -->
       <div class="col-md-6">

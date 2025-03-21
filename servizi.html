@@ -22,25 +22,25 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
-
-          <span class="brand-text">Porta Metronia Case Vacanze</span>
-          <div class="brand-divider"></div>
-          <span class="brand-text" style="margin-left: 0px">ROMA</span>
-
-        </a>
+        <!-- Bottone Toggler sempre visibile -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+        <!-- Collapsible Menu (che include anche il brand) -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <a class="navbar-brand d-flex align-items-center mb-3 mb-lg-0 me-lg-auto mobile-brand" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
+            <span class="brand-text d-none d-lg-inline-block">Porta Metronia Case Vacanze</span>
+            <div class="brand-divider d-none d-lg-inline-block"></div>
+            <span class="brand-text d-none d-lg-inline-block">ROMA</span>
+          </a>
+          <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
             <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
             <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
             <li class="nav-item">
-              <a class="cta-button nav-link" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
+              <a class="header-button" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
             </li>
           </ul>
         </div>
@@ -48,7 +48,10 @@
     </nav>
   </header>
 
-
+  <!-- Bottone Scroll to Top -->
+  <button id="scrollToTopBtn" style="display: none;">
+    <i class="bi bi-chevron-up"></i>
+  </button>
   <section id="servizi" class="py-5">
   <div class="container">
     <div class="row align-items-center">
@@ -57,7 +60,7 @@
         <h1>Scopri i Servizi di Porta Metronia</h1>
         <p>
           L'agenzia offre sia una formula di gestione completa che formule di gestione parziale della casa vacanze,
-          seguendo un approccio modulare che consente ai proprietari di scegliere solo i servizi di cui hanno bisogno,
+          seguendo un <strong>approccio modulare</strong> che consente ai proprietari di scegliere solo i servizi di cui hanno bisogno,
           dalla richiesta di permessi al Comune, all'ottimizzazione degli annunci online, alla gestione fisica dei Check-in.
         </p>
 
@@ -65,44 +68,54 @@
           <li>
             <a class="icon-link text-dark text-decoration-none" href="#cards-section">
               <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Approccio modulare: scegli solo i servizi di cui hai bisogno
+              <strong>Esplora i servizi e scegli solo quelli di cui hai bisogno</strong>
             </a>
           </li>
           <li>
             <a class="icon-link text-dark text-decoration-none" href="#pacchetti">
               <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Esplora e confronta i pacchetti più scelti
+              <strong>Confronta i pacchetti standard più scelti</strong>
             </a>
           </li>
           <li>
-            <a class="icon-link text-dark text-decoration-none" href="#cards-section">
+            <a class="icon-link text-dark text-decoration-none" href="#assembla-pacchetto-section">
               <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-circle"/></svg>
-              Costruisci la tua offerta su misura
+              <strong>Costruisci il tuo pacchetto su misura</strong>
             </a>
           </li>
         </ul>
         <p><br></p>
-        <a href="#cards-section" class="btn cta-button">Scopri i servizi</a>
+
+      <div class="d-flex col-md-6">
+        <a href="#cards-section" class="btn cta-button flex-fill me-2">Scopri i servizi</a>
+        <a href="#pacchetti" class="btn cta-button-pacchetti flex-fill ms-2">Esplora i pacchetti</a>
+      </div>
+
       </div>
       <!-- Colonna Destra -->
       <div class="col-md-6 text-center">
-        <img src="assets/img/cubes_red.jpg" alt="Servizi offerti" class="img-fluid">
+        <img src="assets/img/s_cube.avif" alt="Servizi offerti" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
 
   
+ <!-- Sezione 12 Cards con titoli e box separati -->
 
 
- <!-- Sezione 12 Cards (senza bottoni) -->
-<section id="cards-section" class="container my-5">
-  <!-- <h1 style="text-align: center;">Servizi Offerti dall'Agenzia</h1>
-  <p style="text-align: center;">
-    Offriamo 12 servizi per le case vacanze a Roma. Seleziona solo quelli di cui hai bisogno e assembla il tuo pacchetto per una gestione su misura
-  </p> -->
+<section id="cards-section" class="container py-5 mb-5"  style="margin-top: 0;">
+  <!-- Prima Row -->
+  <h5 style="margin-bottom: 20px; display: flex; align-items: center; font-weight: bold;">
+    <a href="#pacchetti" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+      Servizi per l'Avvio
+      <i class="bi bi-arrow-right-circle-fill" style="margin-left: 10px; font-size: 1.2em;"></i>
+    </a>
+    <a href="#pacchetti" class="btn cta-button flex-fill ms-2" style="max-width: 200px;">Pacchetto Starter</a>
+  </h5>
+  
+  <div class="service-box">
     <div class="row">
-      <!-- Card 1: Gestione pratiche amministrative -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
@@ -112,74 +125,73 @@
           </div>
         </div>
       </div>
-  
-      <!-- Card 2: Shooting fotografico e creazione annunci -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/camera--v4.png" alt="Shooting fotografico e creazione annunci"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/camera--v4.png" alt="Shooting fotografico"/>
             <h5 class="card-title mt-3">Shooting fotografico e creazione annunci</h5>
             <p class="card-text">Servizio fotografico e creazione di annunci ottimizzati per le piattaforme online.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 3: Ottimizzazione SEO e strategia prezzi -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
+            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO"/>
             <h5 class="card-title mt-3">Ottimizzazione SEO e strategia prezzi</h5>
             <p class="card-text">Ottimizzazione del sito e strategia di prezzi per migliorare la visibilità e le vendite.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 4: Gestione calendario e prenotazioni -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/windows/96/calendar.png" alt="Gestione calendario e prenotazioni"/>
+            <img class="card-icon" src="https://img.icons8.com/windows/96/calendar.png" alt="Gestione calendario"/>
             <h5 class="card-title mt-3">Gestione calendario e prenotazioni</h5>
             <p class="card-text">Gestione delle prenotazioni e disponibilità online.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 5: Check-in e check-out professionale -->
+    </div>
+  </div>
+
+  <!-- Seconda Row -->
+  <h5 style="margin-bottom: 20px; display: flex; align-items: center; font-weight: bold;">
+    <a href="#pacchetti" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+      Servizi per la Gestione Operativa
+      <i class="bi bi-arrow-right-circle-fill" style="margin-left: 10px; font-size: 1.2em;"></i>
+    </a>
+    <a href="#pacchetti" class="btn cta-button flex-fill ms-2" style="max-width: 220px;">Pacchetto Accoglienza</a>
+  </h5>
+  <div class="service-box">
+    <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/door.png" alt="Check-in e check-out professionale"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/door.png" alt="Check-in e check-out"/>
             <h5 class="card-title mt-3">Check-in e check-out professionale</h5>
             <p class="card-text">Assistenza professionale durante il check-in e check-out degli ospiti.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 6: Assistenza ospiti 24/7 -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/helping-hand.png" alt="Assistenza ospiti 24/7"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/helping-hand.png" alt="Assistenza ospiti"/>
             <h5 class="card-title mt-3">Assistenza ospiti 24/7</h5>
             <p class="card-text">Supporto continuo per gli ospiti, disponibile 24 ore su 24.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 7: Gestione guasti e imprevisti -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/fragile.png" alt="Gestione guasti e imprevisti"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/fragile.png" alt="Gestione guasti"/>
             <h5 class="card-title mt-3">Gestione guasti e imprevisti</h5>
             <p class="card-text">Gestione rapida di guasti e imprevisti durante il soggiorno.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 8: Gestione overbooking -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
@@ -189,53 +201,59 @@
           </div>
         </div>
       </div>
-  
-      <!-- Card 9: Guide digitali personalizzate -->
+    </div>
+  </div>
+
+  <!-- Terza Row -->
+  <h5 style="margin-bottom: 20px; display: flex; align-items: center; font-weight: bold;">
+    <a href="#pacchetti" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+      Servizi Digitali e di Monitoraggio
+      <i class="bi bi-arrow-right-circle-fill" style="margin-left: 10px; font-size: 1.2em;"></i>
+    </a>
+    <a href="#pacchetti" class="btn cta-button flex-fill ms-2" style="text-align:center; max-width: 200px;">Pacchetto Digitale</a>
+  </h5>
+  <div class="service-box">
+
+    <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/tourist-male.png" alt="Guide digitali personalizzate"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/tourist-male.png" alt="Guide digitali"/>
             <h5 class="card-title mt-3">Guide digitali personalizzate</h5>
             <p class="card-text">Creazione di guide digitali personalizzate per ogni casa vacanze.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 10: Creazione Linktree per gli ospiti -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/google-maps.png" alt="Creazione Linktree per gli ospiti"/>
+            <img class="card-icon" src="https://img.icons8.com/ios/100/google-maps.png" alt="Linktree ospiti"/>
             <h5 class="card-title mt-3">Creazione Linktree per gli ospiti</h5>
             <p class="card-text">Raccogli tutte le informazioni utili in un unico link per gli ospiti.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 11: Monitoraggio performance e mercato -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios/100/airbnb.png" alt="Monitoraggio performance e mercato"/> 
+            <img class="card-icon" src="https://img.icons8.com/ios/100/airbnb.png" alt="Monitoraggio mercato"/>
             <h5 class="card-title mt-3">Monitoraggio performance e mercato</h5>
             <p class="card-text">Analisi delle performance e delle tendenze di mercato per ottimizzare i guadagni.</p>
           </div>
         </div>
       </div>
-  
-      <!-- Card 12: Reportistica avanzata mensile e annuale -->
       <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
         <div class="card custom-card-service">
           <div class="card-body">
-            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
+            <img class="card-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata"/>
             <h5 class="card-title mt-3">Reportistica avanzata mensile e annuale</h5>
-            <p class="card-text">Report dettagliati sulla performance della casa vacanze, mensili e annuali.</p>
+            <p class="card-text">Report dettagliati sulla performance della casa vacanze.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
   
 
 <!-- Sezione Pacchetti & Comparazione -->
@@ -251,7 +269,7 @@
         <div class="card h-100">
           <div class="card-header text-center">
             <img class="header-icon" src="https://img.icons8.com/windows/96/home.png" alt="home"/>
-            <h4>Pacchetto Base<br><small class="text-muted">Avvio Veloce</small></h4>
+            <h4>Pacchetto Starter<br><small class="text-muted">Avvio Veloce</small></h4>
           </div>
           <div class="card-body text-center">
             <h3 class="card-title pricing-card-title">€550<small class="text-muted">/una-tantum</small></h3>
@@ -351,77 +369,82 @@
         </div>
       </div>
     </div>
-    <a href="#assembla-pacchetto-section" class="btn cta-button">
+    <a href="#confronta-pacchetti-section" class="btn cta-button flex-fill me-2" style="min-width: 250px;">Confronta i Pacchetti</a>
+    <a href="#assembla-pacchetto-section" class="btn cta-button" style="min-width: 250px;">
       Assembla il tuo Pacchetto
     </a>
+    </div>
+
   </div>
 </section>
 
 
 
 
-<section class="container mt-5">
-  <h3 class="text-center mb-4">Confronta i Pacchetti</h3>
-  <div class="table-responsive">
-    <table class="table table-bordered text-left text-danger"  style="font-size: 0.95rem;">
-      <thead class="table-light">
+<section id="confronta-pacchetti-section" class="container-fluid py-5 bg-dark text-white">
+  <h3 class="text-center mb-5">Confronta i Pacchetti</h3>
+  <div class="container mb-5">
+    <div class="table-responsive">
+      <table class="table table-bordered text-danger">
         <thead class="table-light">
-          <tr style="text-align: left; font-size: large;">
-            <th style="width: 30%;">
-              Servizio
-            </th>
-            <th style="width: 10%;">
-              <img class="header-icon" src="https://img.icons8.com/windows/96/home.png" alt="home"/>
-              Base
-            </th>
-            <th style="width: 10%;">
-              <img class="header-icon" src="https://img.icons8.com/windows/96/key.png" alt="key"/>
-              Accoglienza
-            </th>
-            <th style="width: 10%;">
-              <img class="header-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
-              Digitale
-            </th>
-            <th style="width: 10%;">
-              <img class="header-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
-              Monitoraggio
-            </th>
-            <th style="width: 10%;">
-              <img class="header-icon" src="https://img.icons8.com/windows/96/FFFFFF/coliseum.png" alt="coliseum"/>
-              All-Inclusive
-            </th>
-          </tr>
+          <thead class="table-light">
+            <tr>
+              <th style="width: 20%; text-align: left;" class="servizio">
+                Servizio
+              </th>
+              <th style="width: 12%;">
+                <img class="header-icon" src="https://img.icons8.com/windows/96/home.png" alt="home"/>
+                Starter
+              </th>
+              <th style="width: 12%;">
+                <img class="header-icon" src="https://img.icons8.com/windows/96/key.png" alt="key"/>
+                Accoglienza
+              </th>
+              <th style="width: 12%;">
+                <img class="header-icon" src="https://img.icons8.com/ios-filled/100/graph.png" alt="Ottimizzazione SEO e strategia prezzi"/>
+                Digitale
+              </th>
+              <th style="width: 12%;">
+                <img class="header-icon" src="https://img.icons8.com/ios-filled/100/rebalance-portfolio.png" alt="Reportistica avanzata mensile e annuale"/>
+                Monitoraggio
+              </th>
+              <th style="width: 12%;">
+                <img class="header-icon" src="https://img.icons8.com/windows/96/FFFFFF/coliseum.png" alt="coliseum"/>
+                All-Inclusive
+              </th>
+            </tr>
+          </thead>
         </thead>
-      </thead>
-      <tbody style="font-weight: 600;">
-        <tr><td>Gestione pratiche amministrative</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Shooting fotografico e creazione annunci</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Ottimizzazione SEO e strategia prezzi</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Gestione calendario e prenotazioni</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Check-in e check-out professionale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Assistenza ospiti 24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Gestione guasti e imprevisti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Gestione overbooking</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Guide digitali personalizzate</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Creazione Linktree per gli ospiti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Monitoraggio performance e mercato</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Reportistica avanzata mensile e annuale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr><td>Accesso alla dashboard H24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
-        <tr style="font-weight: bold;">
-          <td>Prezzo</td>
-          <td>€550</td>
-          <td>€45/Prenotazione</td>
-          <td>€450</td>
-          <td>€350/mese</td>
-          <td>35% Commissioni</td>
-        </tr>
-      </tbody>
-    </table>
+        <tbody style="font-weight: 600;">
+          <tr><td class="servizio">Gestione pratiche amministrative</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Shooting fotografico e creazione annunci</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Ottimizzazione SEO e strategia prezzi</td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Gestione calendario e prenotazioni</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Check-in e check-out professionale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Assistenza ospiti 24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Gestione guasti e imprevisti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Gestione overbooking</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Guide digitali personalizzate</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Creazione Linktree per gli ospiti</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Monitoraggio performance e mercato</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Reportistica avanzata mensile e annuale</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr><td class="servizio">Accesso alla dashboard H24/7</td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-x-lg text-danger"></i></td><td><i class="bi bi-check-lg text-success"></i></td><td><i class="bi bi-check-lg text-success"></i></td></tr>
+          <tr style="font-weight: bold;">
+            <td class="servizio">Prezzo</td>
+            <td>€550</td>
+            <td>€45/Prenotazione</td>
+            <td>€450</td>
+            <td>€350/mese</td>
+            <td>35% Commissioni</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
 <!-- Sezione Assembla il tuo pacchetto -->
-<section id="assembla-pacchetto-section" class="py-5 bg-light">
+<section id="assembla-pacchetto-section" class="py-5">
   <div class="container">
     <h3 class="text-center mb-4">Assembla il tuo pacchetto</h3>
     <p class="text-center mb-5">
@@ -523,8 +546,8 @@
         </button>
       </div>
       <!-- Colonna Destra: Immagine -->
-      <div class="col-md-4 d-flex align-items-center justify-content-center">
-        <img src="assets/img/assemble.png" alt="Immagine Pacchetto" class="img-fluid" style="height: 250px; filter:invert(.7) brightness(1.4);">
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img src="assets/img/cubes.avif" alt="Immagine Pacchetto" class="img-fluid">
       </div>
     </div>
   </div>
@@ -611,5 +634,6 @@
 
   <!-- Bootstrap JS (includendo Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

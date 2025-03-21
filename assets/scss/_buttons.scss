@@ -1,29 +1,128 @@
 /* _buttons.scss */
 /* CTA Button per navbar, card e altri bottoni */
-.cta-button {
-  background-color: #ff5a5f;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-  
-.cta-button:hover {
-  background-color: #e04e50;
-  text-decoration: none;
-  color: white;
-}
-  
-  .cta-button:click {
-    border-color: #ff5a5f;
-    color: #ff5a5f;
-    color: darken($primary-color, 10%);
-    background-color: darken($primary-color, 10%);
+
+  .cta-button {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;  // Impedisce il testo su più righe
+    min-width: 180px;  // Assicura che i bottoni abbiano una dimensione minima
+    border: 2px solid transparent; // Aggiungi un bordo trasparente di default
   }
 
+  .cta-button:hover,
+  .cta-button:focus,
+  .cta-button:active {
+    background-color: white;
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+  }
   
-/* Stile per il bottone "Stima i Ricavi" */
+  /* Se al click persiste il problema, forziamo con !important */
+  .cta-button:active {
+    background-color: white !important;
+    color: #ad3e42 !important;
+    border-color: #ad3e42  !important;
+  }
 
 
+  .cta-button-pacchetti {
+    align-self:last baseline;
+    display: inline-block;
+    white-space: nowrap;  // Impedisce il testo su più righe
+    min-width: 180px;  // Assicura che i bottoni abbiano una dimensione minima
+    box-sizing: border-box;    // Include padding e border nel calcolo della larghezza
+    border: 2px solid #ff5a5f;  // Outline rosso
+    color: #ff5a5f;            // Testo rosso
+    background-color: transparent;
+    width: 100%;
+    //padding: 0.5rem;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #ff5a5f;
+      color: #fff;
+    }
+
+    &:active{
+      background-color: #ad3e42 !important;
+      color: #ffffff !important;
+      border-color: #ffffff !important;
+    }
+  }
+
+  .header-button {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+    
+  .header-button:hover {
+    background-color: #e04e50;
+    text-decoration: none;
+    color: white;
+  }
+    
+  .header-button:active {
+      color: #ad3e42;
+      color: darken($primary-color, 10%);
+      background-color: darken($primary-color, 10%);
+    }
+
+
+
+    
+    #scrollToTopBtn {
+      width: 40px;                   /* Larghezza fissa */
+      height: 40px;                  /* Altezza fissa */
+      border: 2px solid rgb(102, 102, 102);  /* Bordo per creare il cerchio */
+      border-radius: 50%;            /* Arrotonda per rendere il bottone circolare */
+      display: flex;                 /* Flex per centrare il contenuto */
+      align-items: center;           /* Centra verticalmente */
+      justify-content: center;       /* Centra orizzontalmente */
+      position: fixed;
+      left: 85%;                     /* Posizionato all'85% dal bordo sinistro */
+      bottom: 20px;                  /* Distanza dal fondo */
+      z-index: 100;
+      transition: opacity 0.7s ease-in-out, border-color 0.3s ease, background-color 0.3s ease;
+      background: transparent;       /* Sfondo trasparente */
+      cursor: pointer;
+    }
+    
+    #scrollToTopBtn i {
+      font-size: 1.6rem;               
+      background: none;              
+      transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+      color: rgb(102, 102, 102);                  
+      filter: brightness(1.2);
+      margin: 0;
+      line-height: 1;
+      /* Aumenta lo spessore del tratto dell'icona, se supportato */
+      -webkit-text-stroke: 2px rgb(102, 102, 102);
+    }
+    
+    #scrollToTopBtn:active i {
+      color: #eee;                  /* Colore più light quando il bottone è cliccato */
+      -webkit-text-stroke: 1px #eee; /* Anche il tratto diventa più chiaro */
+    }
+    
+    #scrollToTopBtn:active {
+      border-color: #eee;           /* Cambia il colore del bordo al click */
+      background-color: #333;       /* Sfondo dark gray per un contrasto migliore */
+    }
+    

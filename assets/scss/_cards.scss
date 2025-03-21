@@ -2,7 +2,7 @@
 
 /* Fix per il problema dello scroll */
 section[id] {
-  scroll-margin-top: 80px; /* Modifica il valore in base all'altezza della navbar */
+  scroll-margin-top: 60px; /* Modifica il valore in base all'altezza della navbar */
 }
 
 /* Stile migliorato per le card */
@@ -64,7 +64,7 @@ section[id] {
   min-height: 280px;
   padding: 3%;
   border: none;
-  background-color: rgba(211, 211, 211, 0.822);
+  background-color: rgba(211, 211, 211);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -105,6 +105,13 @@ section[id] {
       background-color: #dbd3c68f !important; // Sfondo rosso per il titolo
     }
       */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+    
     .card-body {
       padding: 2rem; // Aumenta leggermente il padding rispetto al default
 
@@ -124,28 +131,9 @@ section[id] {
       height: auto;
       filter: brightness(0); // Rende l'icona nera (se supportato)
     }
-    
   }
   
-  .cta-button-pacchetti {
-    align-self:last baseline;
-    display: block;
-    width: 100%;
-    box-sizing: border-box;    // Include padding e border nel calcolo della larghezza
-    border: 1.5px solid #ff5a5f;  // Outline rosso
-    color: #ff5a5f;            // Testo rosso
-    background-color: transparent;
-    padding: 0.5rem;
-    text-align: center;
-    font-weight: 700;
-    font-size: 18;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
 
-    &:hover {
-      background-color: #ff5a5f;
-      color: #fff;
-    }
   }
   
   // Stili specifici per il Pacchetto All-Inclusive evidenziato
@@ -159,7 +147,7 @@ section[id] {
       color: #fff; // Testo bianco per garantire il contrasto
     }
   }
-}
+
 
 .rounded-box {
   border-radius: 15px; /* Angoli smussati */
@@ -176,4 +164,18 @@ section[id] {
   height: 100%; /* L'immagine occupa tutta l'altezza del box */
   object-fit: cover; /* Ritaglia l'immagine per coprire l'intero spazio senza deformarsi */
   border-radius: 15px; /* Se vuoi che anche l'immagine abbia angoli smussati */
+}
+
+.service-box {
+  border: 2px solid #ff5a5f; /* Bordo visibile con colore */
+  padding: 20px 20px 0px 20px; /* Riduci il padding inferiore */
+  border-radius: 10px; /* Angoli smussati */
+  margin-bottom: 40px;
+}
+
+
+/* Rimuovi o riduci il margine inferiore dalla sezione e dai suoi componenti */
+#cards-section {
+  margin-bottom: 0 !important; // Rimuove il margine inferiore della sezione
+  padding-bottom: 0 !important; // Rimuove il padding inferiore della sezione
 }

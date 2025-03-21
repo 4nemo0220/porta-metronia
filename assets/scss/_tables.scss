@@ -1,17 +1,31 @@
 // Riduci il padding per rendere la tabella più compatta
-.table {
-    th, td {
-      padding: 0.4rem; // Abbastanza compatto ma leggibile
-      vertical-align: middle;
-      color:rgba(0, 0, 0, 0.89);
-    }
+#confronta-pacchetti 
+
+  // Rows
+  .table tr, td{
+    text-align: center;
+    font-size: medium;
+    vertical-align: middle;
+    color:rgba(0, 0, 0, 0.6);
   }
-  
+
+  .servizio{
+    text-align: left;
+  }
+
+  //Col Titles
+  .table th{
+    font-size: large;
+    padding: 0.4rem; // Abbastanza compatto ma leggibile
+    vertical-align: middle;
+    color:rgba(0, 0, 0);
+    text-align: center;
+  }
   // Stili per rendere più evidenti e bold le icone (spunte e X)
   .table i {
     font-weight: bolder;
     font-size: 1.4rem; // Aumenta la dimensione per maggiore visibilità
-    line-height: 0.8;
+    line-height: 0.7;
   }
   
   // Cambia lo sfondo dei titoli delle colonne a un grigio più scuro
@@ -26,14 +40,41 @@
     margin-right: 5px;   // spazio tra icona e testo
     vertical-align: middle;
     filter: brightness(0); // rende l'icona nera (se l'immagine originale lo permette)
+    margin-bottom: 5px;
   }
   
   // Media query per una migliore gestione su dispositivi con schermo ridotto
   @media (max-width: 768px) {
-    .table {
-      font-size: 0.6rem; // Riduci leggermente il font
-      // Se vuoi far sì che la tabella si adatti senza creare una scrollbar orizzontale,
-      // puoi ridurre ulteriormente i padding o utilizzare un overflow automatico
+    // Icone x e success
+    .table i {
+      font-weight: bolder;
+      font-size: 1rem; // Aumenta la dimensione per maggiore visibilità
+      line-height: 1;
     }
+    // Rows
+    .table tr, td{
+      font-size: 0.6rem;
+    }
+
+    .servizio{
+      font-size: 0.68rem;
+    }
+
+    //Col Titles
+    .table th{
+      vertical-align: middle;
+      font-size: 0.7rem;
+    }
+    //#############
+    .table th {
+      justify-content: center;
+    }
+    
+    /* Rimuove il margine a destra e aggiunge margine inferiore all'icona */
+    .header-icon {
+      margin-bottom: 0.5rem;
+    }
+
+    
   }
   
