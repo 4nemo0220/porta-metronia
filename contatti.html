@@ -1,142 +1,212 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contatti - Porta Metronia Case Vacanze</title>
-  <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/css/contatti.css">
-  <script src="script.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <!-- Icone FontAwesome (opzionale) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- I tuoi CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="home">
-      <a href="index.html" class="brand">
-        <img src="logo.png" alt="Logo" class="logo">
-        <span>Porta Metronia Case Vacanze</span>
-        <div class="divider"></div>
-        <span class="roma-text">ROMA</span>
-      </a>
-    </div>
-    <div class="menu">
-      <nav>
-        <ul>
-          <li><a href="servizi.html">Servizi & Prezzi</a></li>
-          <li><a href="analytics.html">AI & Analytics</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-          <li><a href="stima.html" class="cta-button">Avvia la tua casa</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    <!-- SEZIONE CONTATTI -->
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Bottone Toggler sempre visibile -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
     
-      
-
-    <!-- SEZIONE CHI SIAMO -->
-    <section id="chi-siamo" class="chi-siamo-section">
-      <div class="chi-siamo-content">
-        <div class="chi-siamo-text">
-            <h2>Chi Siamo</h2>
-            <p>
-            Siamo un'agenzia a conduzione familiare con un enorme amore per la città di Roma. Dal 2010 gestiamo case di ogni tipologia – dalle più piccole alle più prestigiose – con passione e attenzione ai dettagli. Conosciamo a fondo ogni quartiere e il suo potenziale, garantendo un servizio curato e una rete di ospiti che torna sempre da noi.
-            </p>
-            <h4>Info & Collaborazioni</h4>
-            <ul class="contact-methods">
-                <li>
-                    <img src="email-icon.png" alt="Icona Email" class="icon">
-                    <a href="mailto:info@portametronia.it">info@portametronia.it</a>
-                </li>
-                <li>
-                    <img src="phone-icon.png" alt="Icona Telefono" class="icon">
-                    <a href="tel:+390123456789">+39 0123 456789</a>
+            <!-- LOGO SU DESKTOP -->
+            <a class="navbar-brand d-none d-lg-flex align-items-center" href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height: 40px;">
+            <span class="brand-text ms-2">Porta Metronia Case Vacanze</span>
+            </a>
+    
+            <!-- Collapsible Menu (logo incluso in mobile) -->
+            <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+            
+            <!-- LOGO SOLO IN MOBILE -->
+            <div class="mobile-logo d-flex justify-content-end d-lg-none w-100">
+                <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height: 40px;">
+                </a>
+            </div>
+    
+            <!-- MENU -->
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
+                <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
+                <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+                <li class="nav-item">
+                <a class="header-button" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
                 </li>
             </ul>
             
-        </div>
-        <div class="chi-siamo-photo">
-            <!-- Inserisci qui la tua foto in bianco e nero -->
-            <img src="assets/images/noi.jpg" alt="Il nostro team">
-          </div>
-      </div>
-    </section>
-    <hr class="section-divider">
-
-<!-- SEZIONE I NOSTRI PRINCIPI -->
-<section id="principi" class="principi-section">
-    <div class="principi-container">
-        <div class="principi-left">
-            <h2>I Nostri Principi</h2>
-            <p>I nostri valori fondamentali che guidano ogni aspetto della gestione:</p>
-            <div class="packages-grid">
-                <div class="package-box">
-                    <h3>Cura e Accuratezza</h3>
-                    <hr class="box-divider">
-                    <p class="description">
-                        Trattiamo le case come se fossero nostre, verificando accuratamente i profili degli ospiti e monitorando ogni dettaglio per prevenire danni.
-                    </p>
-                </div>
-                <div class="package-box">
-                    <h3>Trasparenza</h3>
-                    <hr class="box-divider">
-                    <p class="description">
-                        Con noi ogni operazione è trasparente: sarai sempre aggiornato in tempo reale sulle transazioni e sul rendimento della tua proprietà, permettendoti di beneficiare di una rendita superiore alla media.
-                    </p>
-                </div>
-                <div class="package-box">
-                    <h3>Impegno Umano</h3>
-                    <hr class="box-divider">
-                    <p class="description">
-                        Il nostro approccio si fonda sul rispetto e sull’accoglienza: ci prendiamo cura delle proprietà con passione, mettendo al centro il rapporto umano.
-                    </p>
-                </div>
             </div>
         </div>
+        </nav>
+    </header>
 
-        <div class="principi-right">    
-            <blockquote>
-                <p>
-                    "La nostra missione è curare soggiorni eccezionali e personalizzati che vanno oltre la semplice sistemazione. Creiamo un perfetto mix di comfort, autenticità e convenienza, offrendo proprietà uniche e gestite con passione. Grazie al nostro impegno per l'ospitalità, la trasparenza e l'affidabilità, instauriamo una partnership di fiducia sia con i proprietari che con gli ospiti, trasformando ogni soggiorno in un’esperienza indimenticabile.""
-                </p>
-            </blockquote>
+    <!-- Bottone Scroll to Top -->
+    <button id="scrollToTopBtn" style="display: none;">
+        <i class="bi bi-chevron-up"></i>
+      </button>
+
+  <!-- MAIN CONTENT -->
+  <main class="py-5">
+    <div class="container">
+      <!-- SEZIONE CHI SIAMO -->
+      <section id="chi-siamo" class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2>Chi Siamo</h2>
+            <p>
+              Siamo un'agenzia a conduzione familiare con un enorme amore per la città di Roma. Dal 2010 gestiamo case di ogni tipologia – dalle più piccole alle più prestigiose – con passione e attenzione ai dettagli. Conosciamo a fondo ogni quartiere e il suo potenziale, garantendo un servizio curato e una rete di ospiti che torna sempre da noi.
+            </p>
+            <!-- Bottone che apre il popup per i contatti -->
+            <button type="button" class="btn cta-button" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Contattaci per Info & Collaborazioni
+            </button>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/noi.jpg" alt="Il nostro team" class="img-fluid rounded">
+          </div>
         </div>
-    </div>
-</section>
-<hr class="section-divider">
+      </section>
 
-<!-- SEZIONE STATISTICHE -->
-<section id="statistiche" class="statistiche-section">
-    <h2>Cosa Dicono di Noi</h2>
-    <div class="stats-grid">
-      <div class="stats-box">
-        <h3>14+</h3>
-        <p>Anni di esperienza</p>
-      </div>
-      <div class="stats-box">
-        <h3>23+</h3>
-        <p>Case gestite a Roma</p>
-      </div>
-      <div class="stats-box">
-        <h3>80%</h3>
-        <p>Fidelizzazione ospiti</p>
-      </div>
-      <div class="stats-box">
-        <h3>+20%</h3>
-        <p>Rendita superiore alla media</p>
-      </div>
+      <hr class="my-5">
+
+    <!-- SEZIONE I NOSTRI PRINCIPI -->
+    <section id="principi" class="container my-5 pt-3 pt-md-5">
+        <div class="row">
+        <!-- Colonna Sinistra: Card dei Principi -->
+        <div class="col-md-6">
+            <h2>I Nostri Principi</h2>
+            <p>I nostri valori fondamentali che guidano ogni aspetto della gestione:</p>
+            
+            <!-- Card 1: Cura e Accuratezza -->
+            <div class="card custom-card mb-4">
+            <div class="card-body">
+                <img class="card-icon mb-2" src="assets/images/icon-cura.png" alt="Icona Cura e Accuratezza" style="width:50px;">
+                <h5 class="card-title">Cura e Accuratezza</h5>
+                <p class="card-text">
+                Trattiamo le case come se fossero nostre, verificando i profili degli ospiti e monitorando ogni dettaglio.
+                </p>
+            </div>
+            </div>
+            
+            <!-- Card 2: Trasparenza -->
+            <div class="card custom-card mb-4">
+            <div class="card-body">
+                <img class="card-icon mb-2" src="assets/images/icon-trasparenza.png" alt="Icona Trasparenza" style="width:50px;">
+                <h5 class="card-title">Trasparenza</h5>
+                <p class="card-text">
+                Ogni operazione è trasparente: sarai sempre aggiornato in tempo reale sulle transazioni e sul rendimento.
+                </p>
+            </div>
+            </div>
+            
+            <!-- Card 3: Impegno Umano -->
+            <div class="card custom-card mb-4">
+            <div class="card-body">
+                <img class="card-icon mb-2" src="assets/images/icon-impegno.png" alt="Icona Impegno Umano" style="width:50px;">
+                <h5 class="card-title">Impegno Umano</h5>
+                <p class="card-text">
+                Il nostro approccio si basa sul rispetto e l’accoglienza, mettendo al centro il rapporto umano.
+                </p>
+            </div>
+            </div>
+            
+        </div>
+        
+        <!-- Colonna Destra: (opzionale) -->
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center">
+            <img src="assets/images/principi.jpg" alt="I Nostri Principi" class="img-fluid">
+        </div>
+        </div>
+    </section>
+  
+  
+
+      <!-- SEZIONE STATISTICHE -->
+      <section id="statistiche" class="mb-5">
+        <h2 class="text-center mb-4">Cosa Dicono di Noi</h2>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <div class="card p-3">
+              <h3>14+</h3>
+              <p>Anni di esperienza</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3">
+              <h3>23+</h3>
+              <p>Case gestite a Roma</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3">
+              <h3>80%</h3>
+              <p>Fidelizzazione ospiti</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card p-3">
+              <h3>+20%</h3>
+              <p>Rendita superiore alla media</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>  
   </main>
 
+  <!-- Modal di Contatto -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color:#ff5a5f; color: white;">
+          <h5 class="modal-title" id="contactModalLabel">Contattaci per il Pacchetto Personalizzato</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contact-form">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="messaggio" class="form-label">Messaggio</label>
+              <textarea class="form-control" id="messaggio" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn cta-button">Invia</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2024 Porta Metronia Case Vacanze Roma. Tutti i diritti riservati.</p>
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0">© 2025 Porta Metronia Case Vacanze - Tutti i diritti riservati</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

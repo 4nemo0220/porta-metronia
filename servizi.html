@@ -23,18 +23,28 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <!-- Bottone Toggler sempre visibile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Collapsible Menu (che include anche il brand) -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-          <a class="navbar-brand d-flex align-items-center mb-3 mb-lg-0 me-lg-auto mobile-brand" href="index.html">
-            <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height:40px">
-            <span class="brand-text d-none d-lg-inline-block">Porta Metronia Case Vacanze</span>
-            <div class="brand-divider d-none d-lg-inline-block"></div>
-            <span class="brand-text d-none d-lg-inline-block">ROMA</span>
-          </a>
+  
+        <!-- LOGO SU DESKTOP -->
+        <a class="navbar-brand d-none d-lg-flex align-items-center" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height: 40px;">
+          <span class="brand-text ms-2">Porta Metronia Case Vacanze</span>
+        </a>
+  
+        <!-- Collapsible Menu (logo incluso in mobile) -->
+        <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+          
+          <!-- LOGO SOLO IN MOBILE -->
+          <div class="mobile-logo d-flex justify-content-end d-lg-none w-100">
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="height: 40px;">
+            </a>
+          </div>
+  
+          <!-- MENU -->
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi & Prezzi</a></li>
             <li class="nav-item"><a class="nav-link" href="analytics.html">AI & Analytics</a></li>
@@ -43,6 +53,7 @@
               <a class="header-button" href="https://stima-casa.streamlit.app/" target="_blank">Stima i Ricavi</a>
             </li>
           </ul>
+          
         </div>
       </div>
     </nav>
@@ -369,12 +380,12 @@
         </div>
       </div>
     </div>
-    <a href="#confronta-pacchetti-section" class="btn cta-button flex-fill me-2" style="min-width: 250px;">Confronta i Pacchetti</a>
-    <a href="#assembla-pacchetto-section" class="btn cta-button" style="min-width: 250px;">
-      Assembla il tuo Pacchetto
-    </a>
+    <div class="cta-buttons-container">
+      <a href="#confronta-pacchetti-section" class="btn cta-button me-2">Confronta i Pacchetti</a>
+      <a href="#assembla-pacchetto-section" class="btn cta-button">Assembla il tuo Pacchetto</a>
     </div>
-
+  
+    </div>
   </div>
 </section>
 
@@ -446,8 +457,8 @@
 <!-- Sezione Assembla il tuo pacchetto -->
 <section id="assembla-pacchetto-section" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-4">Assembla il tuo pacchetto</h3>
-    <p class="text-center mb-5">
+    <h3 class="text-center mb-3 mb-md-4">Assembla il tuo pacchetto</h3>
+    <p class="text-center mb-4 px-4">
       Non sai quale pacchetto scegliere? Costruisci la tua offerta su misura!<br>
       Contattaci per una consulenza gratuita e costruisci la tua offerta personalizzata!
     </p>
@@ -546,7 +557,7 @@
         </button>
       </div>
       <!-- Colonna Destra: Immagine -->
-      <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <div class="col-md-6 d-flex align-items-center justify-content-center mt-5 mt-md-0">
         <img src="assets/img/cubes.avif" alt="Immagine Pacchetto" class="img-fluid">
       </div>
     </div>
@@ -631,6 +642,13 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0">© 2025 Porta Metronia Case Vacanze - Tutti i diritti riservati</p>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS (includendo Popper) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -90,3 +90,41 @@ header {
 .navbar-toggler-icon {
   filter: brightness(0) invert(1); /* Colore bianco per l'icona del menu */
 }
+
+/* LOGO MOBILE */
+.mobile-logo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* NAVBAR MOBILE: Allinea il logo a destra */
+@media (max-width: 991px) {
+  .mobile-logo {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar-collapse {
+    text-align: right;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+}
+
+/* NAVBAR DESKTOP: Logo a sinistra, menu a destra */
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-right: auto; /* Spinge il logo a sinistra */
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end; /* Spinge il menu a destra */
+  }
+}
